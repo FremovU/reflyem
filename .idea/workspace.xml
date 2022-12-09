@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="init">
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="good back opacity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -59,7 +59,7 @@
       <workItem from="1670517675267" duration="173000" />
       <workItem from="1670519750180" duration="650000" />
       <workItem from="1670520978957" duration="9915000" />
-      <workItem from="1670576183630" duration="1154000" />
+      <workItem from="1670576183630" duration="3200000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670531746234</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="good back opacity">
+      <created>1670577508222</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670577508222</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="good back opacity" />
+    <option name="LAST_COMMIT_MESSAGE" value="good back opacity" />
   </component>
 </project>
