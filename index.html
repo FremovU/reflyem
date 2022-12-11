@@ -27,52 +27,38 @@
     <link rel="stylesheet" href="assets/style/main.css">
 </head>
 <body>
-
 <!-- Navbar -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark opacity-75" style="background: #000000">
-    <!-- Container wrapper -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: rgba(0, 0, 0, 0.6)!important;">
     <div class="container-fluid">
-        <!-- Toggle button -->
         <button
                 class="navbar-toggler"
                 type="button"
                 data-mdb-toggle="collapse"
-                data-mdb-target="#navbarCenteredExample"
-                aria-controls="navbarCenteredExample"
+                data-mdb-target="#navbarNav"
+                aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
         >
             <i class="fas fa-bars"></i>
         </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="#Main">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#Base">База знаний</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#Discord">Дискорд</a>
+                </li>
+                <li class="nav-item text-white">
+                    <a class="nav-link text-white" href="#Donation">Поддержка</a>
+                </li>
 
-        <!-- Collapsible wrapper -->
-        <div
-                class="collapse navbar-collapse justify-content-center"
-                id="navbarCenteredExample"
-                style="height: 40px"
-        >
-
-            <!-- Left links -->
-            <ul class="navbar-nav mb-2 mb-lg-0" style="height: 30px">
-
-                <li class="nav-item fs-5" >
-                    <a class="nav-link active" style="margin-top: -10px"  aria-current="page" href="#Main">Главная</a>
-                </li>
-                <li class="nav-item fs-5" >
-                    <a class="nav-link active " style="margin-top: -10px" aria-current="page" href="#Base">База знаний</a>
-                </li>
-                <li class="nav-item fs-5" >
-                    <a class="nav-link active " style="margin-top: -10px" aria-current="page" href="#Discord">Дискорд</a>
-                </li>
-                <li class="nav-item fs-5" >
-                    <a class="nav-link active " style="margin-top: -10px" aria-current="page" href="#Donation">Поддержать</a>
-                </li>
             </ul>
-            <!-- Left links -->
         </div>
-        <!-- Collapsible wrapper -->
     </div>
-    <!-- Container wrapper -->
 </nav>
 <!-- Блок Главная -->
 <div
@@ -81,7 +67,6 @@
         height: 1000px;
 "
 >
-
         <a name="Main"></a>
         <div class="d-flex justify-content-center align-items-center h-100 " style="">
             <div class="text-white shadow-5 ">
@@ -90,7 +75,6 @@
                 <a target="_blank" class="btn text-white btn-lg fw-normal rounded-pill mt-3 justify-content-center align-items-center pt-3" style="width: 250px; height: 70px;background-color: rgba(0, 0, 0, 0.6) !important; border-color: rgba(233, 177 , 177 , 0.5)!important;" href="https://drive.google.com/file/d/1xD36sPv89z9q97q1HPe8toXAMzO9MWtm/view?usp=sharing" role="button">Скачать сборку</a>
             </div>
         </div>
-
 </div>
 <!-- Блок Главная -->
 
@@ -103,8 +87,6 @@
         height: 1000px;
 "
 >
-
-
     <div class=" ">
         <div class="text-white shadow-5  text-start">
             <h1 class="mb-3 text-center" style="font-size: 60px">База знаний</h1>
@@ -126,7 +108,6 @@
 >
 
     <a name="Discord"></a>
-
     <div class="h-100 d-flex justify-content-start align-items-center ms-5">
        <iframe  class="align-self-center me-auto" src="https://discord.com/widget?id=769091851977490432&theme=dark" width="380" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         <div class="text-white  w-50 justify-content-end me-5 pe-5">
