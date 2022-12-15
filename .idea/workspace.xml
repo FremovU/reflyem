@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="fix navbar">
-      <change afterPath="$PROJECT_DIR$/assets/image/donatepay_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="fix donatypay">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +73,7 @@
       <workItem from="1671044755920" duration="2120000" />
       <workItem from="1671049496159" duration="1409000" />
       <workItem from="1671092874145" duration="10000" />
-      <workItem from="1671136344750" duration="276000" />
+      <workItem from="1671136344750" duration="454000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -168,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671049623323</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix donatypay">
+      <created>1671136654351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671136654351</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +200,7 @@
     <MESSAGE value="font fix" />
     <MESSAGE value="buttons" />
     <MESSAGE value="fix navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix navbar" />
+    <MESSAGE value="fix donatypay" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix donatypay" />
   </component>
 </project>
