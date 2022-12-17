@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="fix donatypay">
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="fix donatypay1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/62e8e4a757055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/62e8e4a757055.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/Color.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/boosty_logo_svg.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/brand_mark_svg.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/sprite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/image/Без имени-1.psd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Frem/WebstormProjects/reflyem/assets/image",
-    "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frem/WebstormProjects/reflyem/assets/image&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Frem\WebstormProjects\reflyem\assets\image" />
@@ -73,7 +81,8 @@
       <workItem from="1671044755920" duration="2120000" />
       <workItem from="1671049496159" duration="1409000" />
       <workItem from="1671092874145" duration="10000" />
-      <workItem from="1671136344750" duration="454000" />
+      <workItem from="1671136344750" duration="684000" />
+      <workItem from="1671260241337" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -173,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671136654351</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix donatypay1">
+      <created>1671136823201</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671136823201</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +217,7 @@
     <MESSAGE value="buttons" />
     <MESSAGE value="fix navbar" />
     <MESSAGE value="fix donatypay" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix donatypay" />
+    <MESSAGE value="fix donatypay1" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix donatypay1" />
   </component>
 </project>
