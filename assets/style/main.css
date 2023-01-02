@@ -2,9 +2,13 @@
     font-family: 'Zantroke';
     src: url('Zantroke.otf');
 }
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Bold.ttf');
+}
 body {
 
-    font-family: 'Zantroke';
+    font-family: 'Lato';
     text-shadow: 1px 1px 2px black;
     font-size: 26px;
 }
