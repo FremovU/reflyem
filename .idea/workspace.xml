@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="faq">
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="faq-1">
+      <change afterPath="$PROJECT_DIR$/assets/image/builds-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/builds-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/builds-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builds.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/guides.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
@@ -49,9 +54,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Frem\Desktop\reflyem\assets\image" />
       <recent name="C:\Users\Frem\Desktop\reflyem\assets" />
+      <recent name="C:\Users\Frem\Desktop\reflyem" />
       <recent name="C:\Users\Frem\WebstormProjects\reflyem\assets\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frem\Desktop\reflyem\assets\image" />
       <recent name="C:\Users\Frem\Desktop\reflyem\assets\style" />
       <recent name="C:\Users\Frem\Desktop\reflyem" />
     </key>
@@ -95,7 +102,8 @@
       <workItem from="1671386016104" duration="392000" />
       <workItem from="1671402017941" duration="371000" />
       <workItem from="1672680911890" duration="14564000" />
-      <workItem from="1672737316702" duration="4537000" />
+      <workItem from="1672737316702" duration="9878000" />
+      <workItem from="1672749679436" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -251,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672696602999</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="faq-1">
+      <created>1672742984203</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672742984203</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +298,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="fix icon" />
     <MESSAGE value="faq" />
-    <option name="LAST_COMMIT_MESSAGE" value="faq" />
+    <MESSAGE value="faq-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="faq-1" />
   </component>
 </project>
