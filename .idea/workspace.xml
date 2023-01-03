@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="fix icon">
-      <change afterPath="$PROJECT_DIR$/assets/image/faq-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/style/Lato-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="faq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Frem/Desktop/reflyem/assets/image",
-    "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frem/Desktop/reflyem/assets/image&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Frem\Desktop\reflyem\assets\image" />
@@ -96,7 +94,8 @@
       <workItem from="1671382502842" duration="194000" />
       <workItem from="1671386016104" duration="392000" />
       <workItem from="1671402017941" duration="371000" />
-      <workItem from="1672680911890" duration="14082000" />
+      <workItem from="1672680911890" duration="14564000" />
+      <workItem from="1672737316702" duration="4537000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -245,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671382530833</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="faq">
+      <created>1672696602999</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1672696602999</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +282,7 @@
     <MESSAGE value="fix donatypay1" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix icon" />
+    <MESSAGE value="faq" />
+    <option name="LAST_COMMIT_MESSAGE" value="faq" />
   </component>
 </project>
