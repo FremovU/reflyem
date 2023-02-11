@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LPcalc</title>
+    <link rel="stylesheet" href="assets/mdb/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/style/calcLPstyle.css">
+</head>
+<body class="bg-dark">
+<!--Выбор расы(кнопка)-->
+<div class="d-flex justify-content-evenly w-100 mb-3 pt-3">
+    <div class="dropdown">
+        <button
+                class="btn btn-info dropdown-toggle"
+                type="submit"
+                id="raceButton000"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+        >
+            Выберите расу
+        </button>
+        <!--Выбор расы(кнопка)-->
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a><button id="raceArgo"        type="submit" class="dropdown-item">Аргонианин</button></a>
+            <a><button id="raceOrc"         type="submit" class="dropdown-item">Орк</button></a>
+            <a><button id="raceNord"        type="submit" class="dropdown-item">Норд</button></a>
+            <a><button id="raceRedgarc"     type="submit" class="dropdown-item">Редгард</button></a>
+            <a><button id="raceDanmer"      type="submit" class="dropdown-item">Данмер</button></a>
+            <a><button id="raceImperec"     type="submit" class="dropdown-item">Имперец</button></a>
+            <a><button id="raceBosmer"      type="submit" class="dropdown-item">Босмер</button></a>
+            <a><button id="raceCatjit"      type="submit" class="dropdown-item">Каджит</button></a>
+            <a><button id="raceAltmer"      type="submit" class="dropdown-item">Альтмер</button></a>
+            <a><button id="raceBreton"      type="submit" class="dropdown-item">Бретонец</button></a>
+        </ul>
+    </div>
+    <!--кнопка рассчитать-->
+    <button type="submit" id="result" class="btn btn-danger">Расчитать</button>
+    <!--Выбор камня(кнопка)-->
+    <div class="dropdown">
+        <button
+                class="btn btn-info dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+        >
+            Выберите камень
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a><button id="stoneWarrior"     type="submit" class="dropdown-item">Воин</button></a>
+            <a><button id="stoneThif"        type="submit" class="dropdown-item">Вор</button></a>
+            <a><button id="stoneMage"        type="submit" class="dropdown-item">Маг</button></a>
+        </ul>
+    </div>
+    <!--Выбор камня(кнопка)-->
+</div>
+<table class="table w-100 table-dark table-bordered table-hover">
+    <thead>
+    <tr>
+        <th scope="col" class="text-dark" style="background-color: #DEB887"><strong>Описание</strong></th>
+        <th class="text-danger " scope="col">Кузнечное дело</th>
+        <th class="text-danger" scope="col">Одноручное оружие</th>
+        <th class="text-danger" scope="col">Тяжелая броня</th>
+        <th class="text-danger" scope="col">Двуручное оружие</th>
+        <th class="text-danger" scope="col">Стрельба</th>
+        <th class="text-danger" scope="col">Блокирование</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--        Воин-->
+    <tr class="table-dark">
+        <th scope="row" class="text-dark" style="background-color: #add8e6">Базовые значение навыка(Раса + Камень)</th>
+        <td><input class="bg-dark text-light"  id="Blacksmith" value="0" type="number"></td>
+        <td><input class="bg-dark text-light"  id="OneHandedWeapon" value="0" type="number"></td>
+        <td><input class="bg-dark text-light"  id="HeavyArmor" value="0" type="number"></td>
+        <td><input class="bg-dark text-light"  id="TwoHandedWeapon" value="0" type="number"></td>
+        <td><input class="bg-dark text-light"  id="Shooting" value="0" type="number"></td>
+        <td><input class="bg-dark text-light"  id="Blocking"value="0" type="number"></td>
+    </tr>
+
+    <tr class="table-dark">
+        <th scope="row">Значение до которого вы хотите повысить навык</th>
+        <td><input class="bg-dark text-light" value="0" id="BlacksmithValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Требуется очков обучения</th>
+        <td><p class="text-center" id="needLPBlacksmith">0</p></td>
+        <td><p class="text-center" id="needLPOneHandedWeapon">0</p></td>
+        <td><p class="text-center" id="needLPHeavyArmor">0</p></td>
+        <td><p class="text-center" id="needLPTwoHandedWeapon">0</p></td>
+        <td><p class="text-center" id="needLPShooting">0</p></td>
+        <td><p class="text-center" id="needLPBlocking">0</p></td>
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Требуется золота для обучения</th>
+        <td><p class="text-center" id="needGoldBlacksmith">0</p></td>
+        <td><p class="text-center" id="needGoldOneHandedWeapon">0</p></td>
+        <td><p class="text-center" id="needGoldHeavyArmor">0</p></td>
+        <td><p class="text-center" id="needGoldTwoHandedWeapon">0</p></td>
+        <td><p class="text-center" id="needGoldShooting">0</p></td>
+        <td><p class="text-center" id="needGoldBlocking">0</p></td>
+    </tr>
+    <!--        Ловкач-->
+    <tr class="table-dark">
+        <th scope="row">Описание</th>
+        <td class="text-success">Уклонение</td>
+        <td class="text-success">Скрытность</td>
+        <td class="text-success">Взлом</td>
+        <td class="text-success">Карманные кражи</td>
+        <td class="text-success">Красноречие</td>
+        <td class="text-success">Алхимия</td>
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Базовые значение навыка(Раса + Камень)</th>
+        <td><input class="bg-dark text-light" id="Evasion" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Stealth" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Breaking" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Pickpocketing" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Speech" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Alchemy"value="0" type="number"></td>
+
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Значение до которого вы хотите повысить навык</th>
+        <td><input class="bg-dark text-light" value="0" id="" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Требуется очков обучения</th>
+        <td><p class="text-center" id="needLPEvasion">0</p></td>
+        <td><p class="text-center" id="needLPStealth">0</p></td>
+        <td><p class="text-center" id="needLPBreaking">0</p></td>
+        <td><p class="text-center" id="needLPPickpocketing">0</p></td>
+        <td><p class="text-center" id="needLPSpeech">0</p></td>
+        <td><p class="text-center" id="needLPAlchemy">0</p></td>
+
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Требуется золота для обучения</th>
+        <td><p class="text-center" id="needGoldEvasion">0</p></td>
+        <td><p class="text-center" id="needGoldStealth">0</p></td>
+        <td><p class="text-center" id="needGoldBreaking">0</p></td>
+        <td><p class="text-center" id="needGoldPickpocketing">0</p></td>
+        <td><p class="text-center" id="needGoldSpeech">0</p></td>
+        <td><p class="text-center" id="needGoldAlchemy">0</p></td>
+    </tr>
+    <!--        Маг-->
+    <tr class="table-dark">
+        <th scope="row">Описание</th>
+        <td class="text-info">Иллюзия</td>
+        <td class="text-info">Разрушение</td>
+        <td class="text-info">Колдовство</td>
+        <td class="text-info">Восстановление</td>
+        <td class="text-info">Изменение</td>
+        <td class="text-info">Зачарование</td>
+    </tr>
+    <tr class="table-dark ">
+        <th scope="row">Базовые значение навыка(Раса + Камень)</th>
+        <td><input class="bg-dark text-light" id="Illusion" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Destruction" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Witchcraft" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Recovery" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Change" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Enchantment"value="0" type="number"></td>
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Значение до которого вы хотите повысить навык</th>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" type="number"></td>
+    </tr>
+    <tr class="table-dark">
+        <th scope="row">Требуется очков обучения</th>
+        <td><p class="text-center" id="needLPIllusion">0</p></td>
+        <td><p class="text-center" id="needLPDestruction">0</p></td>
+        <td><p class="text-center" id="needLPWitchcraft">0</p></td>
+        <td><p class="text-center" id="needLPRecovery"></p></td>
+        <td><p class="text-center" id="needLPChange">0</p></td>
+        <td><p class="text-center" id="needLPEnchantment">0</p></td>
+    </tr>
+    <tr class="table-dark">
+        <td><p>Требуется золота для обучения</p></td>
+        <td><p class="text-center" id="needGoldIllusion">0</p></td>
+        <td><p class="text-center" id="needGoldDestruction">0</p></td>
+        <td><p class="text-center" id="needGoldWitchcraft">0</p></td>
+        <td><p class="text-center" id="needGoldRecovery">0</p></td>
+        <td><p class="text-center" id="needGoldChange">0</p></td>
+        <td><p class="text-center" id="needGoldEnchantment">0</p></td>
+    </tr>
+    </tbody>
+</table>
+
+<!--Таблица результатов-->
+<div class="h-100 w-50 d-inline-flex justify-content-center align-items-center">
+    <table class="table table-bordered  table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Общее количество очков обучения (вся таблица)</th>
+            <th scope="col" class="text-center " id="allLPTable">0</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Общее количество золота (вся таблица)</th>
+            <td><p class="text-center" id="allGoldTable">0</p></td>
+        </tr>
+
+        <!--    <tr class="table-primary">-->
+        <!--        <th scope="row">Стоимость повышения с одного значения на другое</th>-->
+        <!--        <td>0</td>-->
+        <!--    </tr>-->
+        <!--    <tr class="table-secondary">-->
+        <!--        <th scope="row"></th>-->
+        <!--        <td>0</td>-->
+
+        <!--    </tr>-->
+        <!--    <tr class="table-secondary">-->
+        <!--        <th scope="row"></th>-->
+        <!--        <td>0</td>-->
+
+        <!--    </tr>-->
+
+        </tbody>
+    </table>
+</div>
+<!--Таблица результатов-->
+
+
+
+<script src="assets/mdb/js/mdb.min.js"></script>
+<script src="assets/script/main.js"></script>
+</body>
+</html>

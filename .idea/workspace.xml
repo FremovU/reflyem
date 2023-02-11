@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="faq-1">
-      <change afterPath="$PROJECT_DIR$/assets/image/builds-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/image/builds-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/image/builds-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/builds.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/guides.html" afterDir="false" />
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="builds-1">
+      <change afterPath="$PROJECT_DIR$/assets/script/dataBase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/script/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/calcLPstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/style/dataBase.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/calcLP.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataBase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mag-1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mdb/css/mdb.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/mdb/css/mdb.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builds.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,22 +43,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frem/Desktop/reflyem/assets/image&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Frem/Desktop/reflyem/assets/script",
+    "list.type.of.created.stylesheet": "CSS",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frem\Desktop\reflyem\assets\script" />
+      <recent name="C:\Users\Frem\Desktop\reflyem" />
       <recent name="C:\Users\Frem\Desktop\reflyem\assets\image" />
       <recent name="C:\Users\Frem\Desktop\reflyem\assets" />
-      <recent name="C:\Users\Frem\Desktop\reflyem" />
       <recent name="C:\Users\Frem\WebstormProjects\reflyem\assets\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -103,7 +109,11 @@
       <workItem from="1671402017941" duration="371000" />
       <workItem from="1672680911890" duration="14564000" />
       <workItem from="1672737316702" duration="9878000" />
-      <workItem from="1672749679436" duration="602000" />
+      <workItem from="1672749679436" duration="824000" />
+      <workItem from="1672753612410" duration="913000" />
+      <workItem from="1675160898409" duration="34000" />
+      <workItem from="1675160953433" duration="276000" />
+      <workItem from="1676132441276" duration="3833000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -266,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672742984203</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="builds-1">
+      <created>1672750391678</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1672750391678</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +316,7 @@
     <MESSAGE value="fix icon" />
     <MESSAGE value="faq" />
     <MESSAGE value="faq-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="faq-1" />
+    <MESSAGE value="builds-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="builds-1" />
   </component>
 </project>
