@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="builds-1">
-      <change afterPath="$PROJECT_DIR$/assets/script/dataBase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/script/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/style/calcLPstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/style/dataBase.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calcLP.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataBase.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mag-1.html" afterDir="false" />
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="lpcalc+database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/mdb/css/mdb.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/mdb/css/mdb.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builds.html" beforeDir="false" afterPath="$PROJECT_DIR$/builds.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style/dataBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/dataBase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase.html" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +43,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Frem/Desktop/reflyem/assets/script",
     "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -113,7 +105,8 @@
       <workItem from="1672753612410" duration="913000" />
       <workItem from="1675160898409" duration="34000" />
       <workItem from="1675160953433" duration="276000" />
-      <workItem from="1676132441276" duration="3833000" />
+      <workItem from="1676132441276" duration="5360000" />
+      <workItem from="1676139846411" duration="4268000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -283,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672750391678</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="lpcalc+database">
+      <created>1676136377072</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136377072</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +317,7 @@
     <MESSAGE value="faq" />
     <MESSAGE value="faq-1" />
     <MESSAGE value="builds-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="builds-1" />
+    <MESSAGE value="lpcalc+database" />
+    <option name="LAST_COMMIT_MESSAGE" value="lpcalc+database" />
   </component>
 </project>
