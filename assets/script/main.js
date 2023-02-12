@@ -100,6 +100,9 @@ let needGoldRecovery = document.getElementById('needGoldRecovery');
 let needGoldChange = document.getElementById('needGoldChange');
 let needGoldEnchantment = document.getElementById('needGoldEnchantment');
 
+const FiE_GV_IncreaseCostEvery = 25;
+const FiE_GV_CostLPMult = 1;
+const FiE_GV_CostGoldMult = 60;
 
 function changeWarriorStone() {
     Blacksmith.value = Number(Blacksmith.value) + 5;
@@ -363,24 +366,49 @@ function changeBretonStats() {
     Enchantment.value = 5;
 }
 
+function GetGCostFor(skillValue) {
+    return (Math.ceil(skillValue / FiE_GV_IncreaseCostEvery)) * FiE_GV_CostGoldMult;
+}
+function GetLPCostFor(skillValue) {
+    return (Math.ceil(skillValue/FiE_GV_IncreaseCostEvery)) * FiE_GV_CostLPMult;
+}
+
+function CalculateGCost(currentSkillValue, countValue) {
+    let cost = 0;
+    let index = currentSkillValue;
+    while (index < currentSkillValue + countValue) {
+        index += 1;
+        cost += GetGCostFor(index);
+    }
+    return cost;
+}
+function CalculateLPCost(currentSkillValue, countValue) {
+    let cost = 0;
+    let index = currentSkillValue;
+    while (index < currentSkillValue + countValue) {
+        index += 1
+        cost += GetLPCostFor(index)
+    }
+    return cost;
+}
+
 function formula() {
+    let minus = Number(BlacksmithValue.value) - Number(Blacksmith.value);
 
+    needLPBlacksmith.innerHTML = CalculateLPCost(Number(Blacksmith.value), minus);
+    needGoldBlacksmith.innerHTML = CalculateGCost(Number(Blacksmith.value), minus);
 
-
-    if (BlacksmithValue.value > Blacksmith.value && BlacksmithValue.value !== Blacksmith.value && Blacksmith.value > 0) {
-      if (     BlacksmithValue.value > 0 && BlacksmithValue.value <= 25) needLPBlacksmith.innerHTML = Number(BlacksmithValue.value) - Number(Blacksmith.value) * 1;
-      else if (BlacksmithValue.value > 0 && BlacksmithValue.value <= 50) needLPBlacksmith.innerHTML = Number(BlacksmithValue.value) - Number(Blacksmith.value) * 2;
-      else if (BlacksmithValue.value > 0 && BlacksmithValue.value <= 75) needLPBlacksmith.innerHTML = Number(BlacksmithValue.value) - Number(Blacksmith.value) * 3;
-      else if (BlacksmithValue.value > 0 && BlacksmithValue.value <= 100) needLPBlacksmith.innerHTML = Number(BlacksmithValue.value) - Number(Blacksmith.value) * 4;
-        console.log('true')
-    }
-    else {
-        console.log(BlacksmithValue.value);
-        console.log(Blacksmith.value);
-        needGoldBlacksmith.innerHTML = 0;
-        needLPBlacksmith.innerHTML = 0;
-        console.log('false');
-    }
+    // if (BlacksmithValue.value > Blacksmith.value && BlacksmithValue.value !== Blacksmith.value && Blacksmith.value > 0) {
+    //
+    //     console.log('true')
+    // }
+    // else {
+    //     console.log(BlacksmithValue.value);
+    //     console.log(Blacksmith.value);
+    //     needGoldBlacksmith.innerHTML = 0;
+    //     needLPBlacksmith.innerHTML = 0;
+    //     console.log('false');
+    // }
     // gold
     allGoldTable.innerHTML =
           Number(needGoldBlacksmith.innerHTML)

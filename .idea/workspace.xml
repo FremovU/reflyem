@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="lpcalc+database">
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="database">
+      <change afterPath="$PROJECT_DIR$/assets/script/guides.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/style/dataBase.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style/dataBase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataBase.html" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guides.html" beforeDir="false" afterPath="$PROJECT_DIR$/guides.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -106,7 +107,12 @@
       <workItem from="1675160898409" duration="34000" />
       <workItem from="1675160953433" duration="276000" />
       <workItem from="1676132441276" duration="5360000" />
-      <workItem from="1676139846411" duration="4268000" />
+      <workItem from="1676139846411" duration="4326000" />
+      <workItem from="1676182146258" duration="2023000" />
+      <workItem from="1676192208990" duration="9000" />
+      <workItem from="1676208461366" duration="1147000" />
+      <workItem from="1676221476888" duration="37000" />
+      <workItem from="1676221532915" duration="6295000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -283,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676136377072</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="database">
+      <created>1676144190026</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676144190026</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +331,7 @@
     <MESSAGE value="faq-1" />
     <MESSAGE value="builds-1" />
     <MESSAGE value="lpcalc+database" />
-    <option name="LAST_COMMIT_MESSAGE" value="lpcalc+database" />
+    <MESSAGE value="database" />
+    <option name="LAST_COMMIT_MESSAGE" value="database" />
   </component>
 </project>
