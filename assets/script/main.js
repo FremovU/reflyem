@@ -132,6 +132,12 @@ let warriorStoneOn = true;
 let mageStoneOn = true;
 let thifStoneOn = true;
 
+
+// выбранная раса
+let chosenRace = document.getElementById('chosenRace');
+// выбранный камень
+let chosenStone = document.getElementById('chosenStone');
+
 // камень воина
 function changeWarriorStone() {
 
@@ -490,9 +496,6 @@ function getAllLPFromTable() {
         + Number(needGoldRecovery.innerHTML)
         + Number(needGoldChange.innerHTML)
         + Number(needGoldEnchantment.innerHTML);
-    if (allGoldTable.innerHTML > 0) {
-        allLPTable.classList.add('text-danger');
-    }
 }
 // расчет всех ячеек с золотом с таблицы
 function getAllGoldFromTable() {
@@ -518,21 +521,12 @@ function getAllGoldFromTable() {
         + Number(needLPRecovery.innerHTML)
         + Number(needLPChange.innerHTML)
         + Number(needLPEnchantment.innerHTML);
-    if (allLPTable.innerHTML > 0) {
-        allGoldTable.classList.add('text-warning');
-    }
 }
 // расчет значений из текущего и до которого нужно подня навыка
 function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
     let minus = countValue - currentSkillValue;
     needLp.innerHTML = CalculateLPCost(Number(currentSkillValue), minus);
-    if (needLp.innerHTML > 0) {
-        needLp.classList.add('text-danger');
-    }
     needGold.innerHTML = CalculateGCost(Number(currentSkillValue), minus);
-    if (needGold.innerHTML > 0) {
-        needGold.classList.add('text-warning');
-    }
 }
 
 function formula() {
@@ -561,27 +555,17 @@ function formula() {
     calcLpAndGold(Change.value, ChangeValue.value, needLPChange, needGoldChange);
     calcLpAndGold(Enchantment.value, EnchantmentValue.value, needLPEnchantment, needGoldEnchantment);
 
-
-    // if (BlacksmithValue.value > Blacksmith.value && BlacksmithValue.value !== Blacksmith.value && Blacksmith.value > 0) {
-    //
-    //     console.log('true')
-    // }
-    // else {
-    //     console.log(BlacksmithValue.value);
-    //     console.log(Blacksmith.value);
-    //     needGoldBlacksmith.innerHTML = 0;
-    //     needLPBlacksmith.innerHTML = 0;
-    //     console.log('false');
-    // }
-    // gold
-
-
     // расчет всех ячеек с лп со всей таблицы
     getAllLPFromTable();
     // расчет всех ячеек с золотом со всей таблицы
     getAllGoldFromTable();
 }
 
+// function raceAndStone() {
+//     if (raceArgo.click) chosenRace.innerText += ' Аргонианин';
+//     if (raceOrc.click) chosenRace.innerText += ' Орк';
+//
+// }
 raceArgo.addEventListener('click', changeArgoStats);
 raceOrc.addEventListener('click', changeOrcStats);
 raceNord.addEventListener('click', changeNordStats);
@@ -597,5 +581,6 @@ stoneMage.addEventListener('click', changeMageStone);
 stoneThif.addEventListener('click', changeThifStone);
 
 result.addEventListener('click', formula);
+//result.addEventListener('click', raceAndStone);
 
 
