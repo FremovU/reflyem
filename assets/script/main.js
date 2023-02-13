@@ -186,6 +186,7 @@ function changeThifStone() {
     if (thifStoneOn) {
         thifStoneOn = false;
         console.log('Камень вора включен')
+        stoneWarrior.innerHTML += ' активен';
         Evasion.value = Number(Evasion.value) + 5;
         Stealth.value = Number(Stealth.value) + 5;
         Breaking.value = Number(Breaking.value) + 5;
@@ -488,8 +489,10 @@ function getAllLPFromTable() {
         + Number(needGoldWitchcraft.innerHTML)
         + Number(needGoldRecovery.innerHTML)
         + Number(needGoldChange.innerHTML)
-        + Number(needGoldEnchantment.innerHTML)
-    ;
+        + Number(needGoldEnchantment.innerHTML);
+    if (allGoldTable.innerHTML > 0) {
+        allLPTable.classList.add('text-danger');
+    }
 }
 // расчет всех ячеек с золотом с таблицы
 function getAllGoldFromTable() {
@@ -515,12 +518,21 @@ function getAllGoldFromTable() {
         + Number(needLPRecovery.innerHTML)
         + Number(needLPChange.innerHTML)
         + Number(needLPEnchantment.innerHTML);
+    if (allLPTable.innerHTML > 0) {
+        allGoldTable.classList.add('text-warning');
+    }
 }
 // расчет значений из текущего и до которого нужно подня навыка
 function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
     let minus = countValue - currentSkillValue;
     needLp.innerHTML = CalculateLPCost(Number(currentSkillValue), minus);
+    if (needLp.innerHTML > 0) {
+        needLp.classList.add('text-danger');
+    }
     needGold.innerHTML = CalculateGCost(Number(currentSkillValue), minus);
+    if (needGold.innerHTML > 0) {
+        needGold.classList.add('text-warning');
+    }
 }
 
 function formula() {
