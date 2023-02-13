@@ -4,7 +4,6 @@
     <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="lpcalc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calcLP.html" beforeDir="false" afterPath="$PROJECT_DIR$/calcLP.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,8 @@
       <workItem from="1676208461366" duration="1147000" />
       <workItem from="1676221476888" duration="37000" />
       <workItem from="1676221532915" duration="6427000" />
-      <workItem from="1676293048772" duration="9559000" />
+      <workItem from="1676293048772" duration="9627000" />
+      <workItem from="1676308807335" duration="3327000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -303,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676229168260</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="lpcalc">
+      <created>1676303974253</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1676303974253</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

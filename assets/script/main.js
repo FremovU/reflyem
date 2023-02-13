@@ -127,87 +127,80 @@ let needGoldRecovery = document.getElementById('needGoldRecovery');
 let needGoldChange = document.getElementById('needGoldChange');
 let needGoldEnchantment = document.getElementById('needGoldEnchantment');
 
+// для проверки камней
 let warriorStoneOn = true;
 let mageStoneOn = true;
 let thifStoneOn = true;
 
-function disableMageStone() {
-    mageStoneOn = true;
-    console.log('отключен камень мага');
-    Illusion.value = Number(Illusion.value) - 5;
-    Destruction.value = Number(Destruction.value) - 5;
-    Witchcraft.value = Number(Witchcraft.value) - 5;
-    Recovery.value = Number(Recovery.value) - 5;
-    Change.value = Number(Change.value) - 5;
-    Enchantment.value = Number(Enchantment.value) - 5;
-}
-function disableWarriorStone() {
-    warriorStoneOn - true;
-    console.log('отключен камень воина');
-    Blacksmith.value = Number(Blacksmith.value) - 5;
-    OneHandedWeapon.value = Number(OneHandedWeapon.value) - 5;
-    HeavyArmor.value = Number(HeavyArmor.value) -5;
-    TwoHandedWeapon.value = Number(TwoHandedWeapon.value) - 5;
-    Shooting.value = Number(Shooting.value) - 5;
-    Blocking.value = Number(Blocking.value) -5;
-}
-function disableThifStone() {
-    thifStoneOn = true;
-    console.log('отключен камень вора');
-    Evasion.value = Number(Evasion.value) - 5;
-    Stealth.value = Number(Stealth.value) - 5;
-    Breaking.value = Number(Breaking.value) - 5;
-    Pickpocketing.value = Number(Pickpocketing.value) - 5;
-    Speech.value = Number(Speech.value) - 5;
-    Alchemy.value = Number(Alchemy.value) - 5;
-}
-
+// камень воина
 function changeWarriorStone() {
 
     if (warriorStoneOn) {
         warriorStoneOn = false;
+        console.log('Камень воина включен')
         Blacksmith.value = Number(Blacksmith.value) + 5;
         OneHandedWeapon.value = Number(OneHandedWeapon.value) + 5;
         HeavyArmor.value = Number(HeavyArmor.value) + 5;
         TwoHandedWeapon.value = Number(TwoHandedWeapon.value) + 5;
         Shooting.value = Number(Shooting.value) + 5;
         Blocking.value = Number(Blocking.value) + 5;
-    } else {
-        disableWarriorStone();
-        console.log('Камень воина уже выбран');
+
+    } else if (!warriorStoneOn) {
+        warriorStoneOn = true;
+        console.log('Камень воина выключен')
+        Blacksmith.value = Number(Blacksmith.value) - 5;
+        OneHandedWeapon.value = Number(OneHandedWeapon.value) - 5;
+        HeavyArmor.value = Number(HeavyArmor.value) - 5;
+        TwoHandedWeapon.value = Number(TwoHandedWeapon.value) - 5;
+        Shooting.value = Number(Shooting.value) - 5;
+        Blocking.value = Number(Blocking.value) - 5;
     }
 }
-
+// камень мага
 function changeMageStone() {
 
     if (mageStoneOn) {
         mageStoneOn = false;
+        console.log('Камень мага включен')
         Illusion.value = Number(Illusion.value) + 5;
         Destruction.value = Number(Destruction.value) + 5;
         Witchcraft.value = Number(Witchcraft.value) + 5;
         Recovery.value = Number(Recovery.value) + 5;
         Change.value = Number(Change.value) + 5;
         Enchantment.value = Number(Enchantment.value) + 5;
-    } else {
-        disableMageStone();
-        console.log('Камень мага уже выбран');
-    }
 
+    } else if (!mageStoneOn) {
+        mageStoneOn = true;
+        console.log('Камень мага выключен')
+        Illusion.value = Number(Illusion.value) - 5;
+        Destruction.value = Number(Destruction.value) - 5;
+        Witchcraft.value = Number(Witchcraft.value) - 5;
+        Recovery.value = Number(Recovery.value) - 5;
+        Change.value = Number(Change.value) - 5;
+        Enchantment.value = Number(Enchantment.value) - 5;
+    }
 }
+// камень вора
 function changeThifStone() {
 
     if (thifStoneOn) {
         thifStoneOn = false;
+        console.log('Камень вора включен')
         Evasion.value = Number(Evasion.value) + 5;
-        Evasion.classList.add('text-success');
         Stealth.value = Number(Stealth.value) + 5;
         Breaking.value = Number(Breaking.value) + 5;
         Pickpocketing.value = Number(Pickpocketing.value) + 5;
         Speech.value = Number(Speech.value) + 5;
         Alchemy.value = Number(Alchemy.value) + 5;
-    } else {
-        disableThifStone();
-        console.log('Камень вора уже выбран');
+    } else if (!thifStoneOn) {
+        thifStoneOn = true;
+        console.log('Камень вора выключен')
+        Evasion.value = Number(Evasion.value) - 5;
+        Stealth.value = Number(Stealth.value) - 5;
+        Breaking.value = Number(Breaking.value) - 5;
+        Pickpocketing.value = Number(Pickpocketing.value) - 5;
+        Speech.value = Number(Speech.value) - 5;
+        Alchemy.value = Number(Alchemy.value) - 5;
     }
 }
 
