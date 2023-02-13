@@ -7,8 +7,33 @@
     <link rel="stylesheet" href="assets/style/calcLPstyle.css">
 </head>
 <body class="bg-dark" style="background-color: black!important;">
+
 <!--Выбор расы(кнопка)-->
 <div class="d-flex justify-content-evenly w-100 mb-3 pt-3">
+
+    <!--FAQ-->
+    <button type="button" id="FAQ" class="btn btn-danger" data-mdb-toggle="modal" data-mdb-target="#exampleModal">FAQ</button>
+    <!--FAQ-->
+
+    <!-- Modal -->
+    <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Как пользоваться калькулятором</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/image/slidkiy_rulet.png" class="w-25" alt="" srcset="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
     <div class="dropdown">
         <button
                 class="btn btn-info dropdown-toggle"
@@ -34,8 +59,7 @@
         </ul>
 
     </div>
-    <!--кнопка рассчитать-->
-    <button type="submit" id="result" class="btn btn-danger">Расчитать</button>
+
     <!--Выбор камня(кнопка)-->
     <div class="dropdown">
         <button
@@ -55,6 +79,28 @@
     </div>
     <!--Выбор камня(кнопка)-->
 
+    <!--Выбор количества LP(кнопка)-->
+    <div class="dropdown">
+        <button
+                class="btn btn-info dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton3"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+        >
+            Выберите уровень сложности
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a><button id="tenLP"     type="submit" class="dropdown-item">10 LP</button></a>
+            <a><button id="fifteenLp"        type="submit" class="dropdown-item">15 LP</button></a>
+            <a><button id="twentyLP"        type="submit" class="dropdown-item">20 LP</button></a>
+        </ul>
+    </div>
+    <!--Выбор количества LP(кнопка)-->
+
+    <!--кнопка рассчитать-->
+    <button type="submit" id="result" class="btn btn-danger">Расчитать</button>
+    <!--кнопка рассчитать-->
 </div>
 <table class="table w-100 table-dark table-bordered">
     <thead>
@@ -220,8 +266,8 @@
         </tr>
         </tbody>
     </table>
-    <p class="text-white d-flex justify-content-end align-items-end w-25" id="chosenRace">Раса: </p>
-    <p class="text-white d-flex justify-content-end align-items-end w-25" id="chosenStone">Камень: </p>
+<!--    <p class="text-white d-flex justify-content-end align-items-end w-25" id="chosenRace">Раса: </p>-->
+<!--    <p class="text-white d-flex justify-content-end align-items-end w-25" id="chosenStone">Камень: </p>-->
 </div>
 
 <!--Таблица результатов-->

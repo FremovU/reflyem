@@ -134,9 +134,9 @@ let thifStoneOn = true;
 
 
 // выбранная раса
-let chosenRace = document.getElementById('chosenRace');
-// выбранный камень
-let chosenStone = document.getElementById('chosenStone');
+// let chosenRace = document.getElementById('chosenRace');
+// // выбранный камень
+// let chosenStone = document.getElementById('chosenStone');
 
 // камень воина
 function changeWarriorStone() {
