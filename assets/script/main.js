@@ -1,3 +1,9 @@
+'use strict';
+const FiE_GV_IncreaseCostEvery = 25;
+const FiE_GV_CostLPMult = 1;
+const FiE_GV_CostGoldMult = 60;
+
+
 let result = document.getElementById('result');
 
 let raceArgo = document.getElementById('raceArgo');
@@ -44,8 +50,29 @@ let stoneMage = document.getElementById('stoneMage');
 let stoneThif = document.getElementById('stoneThif');
 //
 
-// Значение до которого вы хотите повысить навык
+// Значение до которого вы хотите повысить навык воин
 let BlacksmithValue = document.getElementById('BlacksmithValue');
+let OneHandedWeaponValue = document.getElementById('OneHandedWeaponValue');
+let HeavyArmorValue = document.getElementById('HeavyArmorValue');
+let TwoHandedWeaponValue = document.getElementById('TwoHandedWeaponValue');
+let ShootingValue = document.getElementById('ShootingValue');
+let BlockingValue = document.getElementById('BlockingValue');
+
+// Значение до которого вы хотите повысить навык вор
+let EvasionValue = document.getElementById('EvasionValue');
+let StealthValue = document.getElementById('StealthValue');
+let BreakingValue = document.getElementById('BreakingValue');
+let PickpocketingValue = document.getElementById('PickpocketingValue');
+let SpeechValue = document.getElementById('SpeechValue');
+let AlchemyValue = document.getElementById('AlchemyValue');
+
+// Значение до которого вы хотите повысить навык вор
+let IllusionValue = document.getElementById('IllusionValue');
+let DestructionValue = document.getElementById('DestructionValue');
+let WitchcraftValue = document.getElementById('WitchcraftValue');
+let RecoveryValue = document.getElementById('RecoveryValue');
+let ChangeValue = document.getElementById('ChangeValue');
+let EnchantmentValue = document.getElementById('EnchantmentValue');
 
 
 // Требуется очков обучения воин
@@ -100,35 +127,88 @@ let needGoldRecovery = document.getElementById('needGoldRecovery');
 let needGoldChange = document.getElementById('needGoldChange');
 let needGoldEnchantment = document.getElementById('needGoldEnchantment');
 
-const FiE_GV_IncreaseCostEvery = 25;
-const FiE_GV_CostLPMult = 1;
-const FiE_GV_CostGoldMult = 60;
+let warriorStoneOn = true;
+let mageStoneOn = true;
+let thifStoneOn = true;
+
+function disableMageStone() {
+    mageStoneOn = true;
+    console.log('отключен камень мага');
+    Illusion.value = Number(Illusion.value) - 5;
+    Destruction.value = Number(Destruction.value) - 5;
+    Witchcraft.value = Number(Witchcraft.value) - 5;
+    Recovery.value = Number(Recovery.value) - 5;
+    Change.value = Number(Change.value) - 5;
+    Enchantment.value = Number(Enchantment.value) - 5;
+}
+function disableWarriorStone() {
+    warriorStoneOn - true;
+    console.log('отключен камень воина');
+    Blacksmith.value = Number(Blacksmith.value) - 5;
+    OneHandedWeapon.value = Number(OneHandedWeapon.value) - 5;
+    HeavyArmor.value = Number(HeavyArmor.value) -5;
+    TwoHandedWeapon.value = Number(TwoHandedWeapon.value) - 5;
+    Shooting.value = Number(Shooting.value) - 5;
+    Blocking.value = Number(Blocking.value) -5;
+}
+function disableThifStone() {
+    thifStoneOn = true;
+    console.log('отключен камень вора');
+    Evasion.value = Number(Evasion.value) - 5;
+    Stealth.value = Number(Stealth.value) - 5;
+    Breaking.value = Number(Breaking.value) - 5;
+    Pickpocketing.value = Number(Pickpocketing.value) - 5;
+    Speech.value = Number(Speech.value) - 5;
+    Alchemy.value = Number(Alchemy.value) - 5;
+}
 
 function changeWarriorStone() {
-    Blacksmith.value = Number(Blacksmith.value) + 5;
-    OneHandedWeapon.value = Number(OneHandedWeapon.value) + 5;
-    HeavyArmor.value = Number(HeavyArmor.value) + 5;
-    TwoHandedWeapon.value = Number(TwoHandedWeapon.value) + 5;
-    Shooting.value = Number(Shooting.value) + 5;
-    Blocking.value = Number(Blocking.value) + 5;
+
+    if (warriorStoneOn) {
+        warriorStoneOn = false;
+        Blacksmith.value = Number(Blacksmith.value) + 5;
+        OneHandedWeapon.value = Number(OneHandedWeapon.value) + 5;
+        HeavyArmor.value = Number(HeavyArmor.value) + 5;
+        TwoHandedWeapon.value = Number(TwoHandedWeapon.value) + 5;
+        Shooting.value = Number(Shooting.value) + 5;
+        Blocking.value = Number(Blocking.value) + 5;
+    } else {
+        disableWarriorStone();
+        console.log('Камень воина уже выбран');
+    }
 }
 
 function changeMageStone() {
-    Illusion.value = Number(Illusion.value) + 5;
-    Destruction.value = Number(Destruction.value) + 5;
-    Witchcraft.value = Number(Witchcraft.value) + 5;
-    Recovery.value = Number(Recovery.value) + 5;
-    Change.value = Number(Change.value) + 5;;
-    Enchantment.value = Number(Enchantment.value) + 5;
+
+    if (mageStoneOn) {
+        mageStoneOn = false;
+        Illusion.value = Number(Illusion.value) + 5;
+        Destruction.value = Number(Destruction.value) + 5;
+        Witchcraft.value = Number(Witchcraft.value) + 5;
+        Recovery.value = Number(Recovery.value) + 5;
+        Change.value = Number(Change.value) + 5;
+        Enchantment.value = Number(Enchantment.value) + 5;
+    } else {
+        disableMageStone();
+        console.log('Камень мага уже выбран');
+    }
+
 }
 function changeThifStone() {
-    Evasion.value = Number(Evasion.value) + 5;
-    Evasion.classList.add('text-success');
-    Stealth.value = Number(Stealth.value) + 5;
-    Breaking.value = Number(Breaking.value) + 5;
-    Pickpocketing.value = Number(Pickpocketing.value) + 5;
-    Speech.value = Number(Speech.value) + 5;
-    Alchemy.value = Number(Alchemy.value) + 5;
+
+    if (thifStoneOn) {
+        thifStoneOn = false;
+        Evasion.value = Number(Evasion.value) + 5;
+        Evasion.classList.add('text-success');
+        Stealth.value = Number(Stealth.value) + 5;
+        Breaking.value = Number(Breaking.value) + 5;
+        Pickpocketing.value = Number(Pickpocketing.value) + 5;
+        Speech.value = Number(Speech.value) + 5;
+        Alchemy.value = Number(Alchemy.value) + 5;
+    } else {
+        disableThifStone();
+        console.log('Камень вора уже выбран');
+    }
 }
 
 function changeArgoStats() {
@@ -366,6 +446,7 @@ function changeBretonStats() {
     Enchantment.value = 5;
 }
 
+// формула расчета лп
 function GetGCostFor(skillValue) {
     return (Math.ceil(skillValue / FiE_GV_IncreaseCostEvery)) * FiE_GV_CostGoldMult;
 }
@@ -392,26 +473,10 @@ function CalculateLPCost(currentSkillValue, countValue) {
     return cost;
 }
 
-function formula() {
-    let minus = Number(BlacksmithValue.value) - Number(Blacksmith.value);
-
-    needLPBlacksmith.innerHTML = CalculateLPCost(Number(Blacksmith.value), minus);
-    needGoldBlacksmith.innerHTML = CalculateGCost(Number(Blacksmith.value), minus);
-
-    // if (BlacksmithValue.value > Blacksmith.value && BlacksmithValue.value !== Blacksmith.value && Blacksmith.value > 0) {
-    //
-    //     console.log('true')
-    // }
-    // else {
-    //     console.log(BlacksmithValue.value);
-    //     console.log(Blacksmith.value);
-    //     needGoldBlacksmith.innerHTML = 0;
-    //     needLPBlacksmith.innerHTML = 0;
-    //     console.log('false');
-    // }
-    // gold
+// расчет всех ячеек с лп с таблицы
+function getAllLPFromTable() {
     allGoldTable.innerHTML =
-          Number(needGoldBlacksmith.innerHTML)
+        Number(needGoldBlacksmith.innerHTML)
         + Number(needGoldHeavyArmor.innerHTML)
         + Number(needGoldTwoHandedWeapon.innerHTML)
         + Number(needGoldOneHandedWeapon.innerHTML)
@@ -432,7 +497,9 @@ function formula() {
         + Number(needGoldChange.innerHTML)
         + Number(needGoldEnchantment.innerHTML)
     ;
-    // Level Points
+}
+// расчет всех ячеек с золотом с таблицы
+function getAllGoldFromTable() {
     allLPTable.innerHTML =
         Number(needLPBlacksmith.innerHTML)
         + Number(needLPHeavyArmor.innerHTML)
@@ -454,8 +521,60 @@ function formula() {
         + Number(needLPWitchcraft.innerHTML)
         + Number(needLPRecovery.innerHTML)
         + Number(needLPChange.innerHTML)
-        + Number(needLPEnchantment.innerHTML)
+        + Number(needLPEnchantment.innerHTML);
+}
+// расчет значений из текущего и до которого нужно подня навыка
+function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
+    let minus = countValue - currentSkillValue;
+    needLp.innerHTML = CalculateLPCost(Number(currentSkillValue), minus);
+    needGold.innerHTML = CalculateGCost(Number(currentSkillValue), minus);
+}
 
+function formula() {
+
+    // расчет лп + золота воин
+    calcLpAndGold(Blacksmith.value, BlacksmithValue.value, needLPBlacksmith, needGoldBlacksmith);
+    calcLpAndGold(OneHandedWeapon.value, OneHandedWeaponValue.value, needLPOneHandedWeapon, needGoldOneHandedWeapon);
+    calcLpAndGold(HeavyArmor.value, HeavyArmorValue.value, needLPHeavyArmor, needGoldHeavyArmor);
+    calcLpAndGold(TwoHandedWeapon.value, TwoHandedWeaponValue.value, needLPTwoHandedWeapon, needGoldTwoHandedWeapon);
+    calcLpAndGold(Shooting.value, ShootingValue.value, needLPShooting, needGoldShooting);
+    calcLpAndGold(Blocking.value, BlockingValue.value, needLPBlocking, needGoldBlocking);
+
+    // расчет лп + золота вор
+    calcLpAndGold(Evasion.value, EvasionValue.value, needLPEvasion, needGoldEvasion);
+    calcLpAndGold(Stealth.value, StealthValue.value, needLPStealth, needGoldStealth);
+    calcLpAndGold(Breaking.value, BreakingValue.value, needLPBreaking, needGoldBreaking);
+    calcLpAndGold(Pickpocketing.value, PickpocketingValue.value, needLPPickpocketing, needGoldPickpocketing);
+    calcLpAndGold(Speech.value, SpeechValue.value, needLPSpeech, needGoldSpeech);
+    calcLpAndGold(Alchemy.value, AlchemyValue.value, needLPAlchemy, needGoldAlchemy);
+
+    // расчет лп + золота маг
+    calcLpAndGold(Illusion.value, IllusionValue.value, needLPIllusion, needGoldIllusion);
+    calcLpAndGold(Destruction.value, DestructionValue.value, needLPDestruction, needGoldDestruction);
+    calcLpAndGold(Witchcraft.value, WitchcraftValue.value, needLPWitchcraft, needGoldWitchcraft);
+    calcLpAndGold(Recovery.value, RecoveryValue.value, needLPRecovery, needGoldRecovery);
+    calcLpAndGold(Change.value, ChangeValue.value, needLPChange, needGoldChange);
+    calcLpAndGold(Enchantment.value, EnchantmentValue.value, needLPEnchantment, needGoldEnchantment);
+
+
+    // if (BlacksmithValue.value > Blacksmith.value && BlacksmithValue.value !== Blacksmith.value && Blacksmith.value > 0) {
+    //
+    //     console.log('true')
+    // }
+    // else {
+    //     console.log(BlacksmithValue.value);
+    //     console.log(Blacksmith.value);
+    //     needGoldBlacksmith.innerHTML = 0;
+    //     needLPBlacksmith.innerHTML = 0;
+    //     console.log('false');
+    // }
+    // gold
+
+
+    // расчет всех ячеек с лп со всей таблицы
+    getAllLPFromTable();
+    // расчет всех ячеек с золотом со всей таблицы
+    getAllGoldFromTable();
 }
 
 raceArgo.addEventListener('click', changeArgoStats);

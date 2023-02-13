@@ -53,12 +53,13 @@
         </ul>
     </div>
     <!--Выбор камня(кнопка)-->
+
 </div>
 <table class="table w-100 table-dark table-bordered table-hover">
     <thead>
     <tr>
         <th scope="col" class="text-dark" style="background-color: #DEB887"><strong>Описание</strong></th>
-        <th class="text-danger " scope="col">Кузнечное дело</th>
+        <th class="text-danger" scope="col">Кузнечное дело</th>
         <th class="text-danger" scope="col">Одноручное оружие</th>
         <th class="text-danger" scope="col">Тяжелая броня</th>
         <th class="text-danger" scope="col">Двуручное оружие</th>
@@ -67,7 +68,7 @@
     </tr>
     </thead>
     <tbody>
-    <!--        Воин-->
+    <!--Воин-->
     <tr class="table-dark">
         <th scope="row" class="text-dark" style="background-color: #add8e6">Базовые значение навыка(Раса + Камень)</th>
         <td><input class="bg-dark text-light"  id="Blacksmith" value="0" type="number"></td>
@@ -75,17 +76,17 @@
         <td><input class="bg-dark text-light"  id="HeavyArmor" value="0" type="number"></td>
         <td><input class="bg-dark text-light"  id="TwoHandedWeapon" value="0" type="number"></td>
         <td><input class="bg-dark text-light"  id="Shooting" value="0" type="number"></td>
-        <td><input class="bg-dark text-light"  id="Blocking"value="0" type="number"></td>
+        <td><input class="bg-dark text-light"  id="Blocking" value="0" type="number"></td>
     </tr>
 
     <tr class="table-dark">
         <th scope="row">Значение до которого вы хотите повысить навык</th>
         <td><input class="bg-dark text-light" value="0" id="BlacksmithValue" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="OneHandedWeaponValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="HeavyArmorValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="TwoHandedWeaponValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="ShootingValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="BlockingValue" type="number"></td>
     </tr>
     <tr class="table-dark">
         <th scope="row">Требуется очков обучения</th>
@@ -122,17 +123,17 @@
         <td><input class="bg-dark text-light" id="Breaking" value="0" type="number"></td>
         <td><input class="bg-dark text-light" id="Pickpocketing" value="0" type="number"></td>
         <td><input class="bg-dark text-light" id="Speech" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" id="Alchemy"value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Alchemy" value="0" type="number"></td>
 
     </tr>
     <tr class="table-dark">
         <th scope="row">Значение до которого вы хотите повысить навык</th>
-        <td><input class="bg-dark text-light" value="0" id="" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="EvasionValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="StealthValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="BreakingValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="PickpocketingValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="SpeechValue" type="number"></td>
+        <td><input class="bg-dark text-light" value="0" id="AlchemyValue" type="number"></td>
     </tr>
     <tr class="table-dark">
         <th scope="row">Требуется очков обучения</th>
@@ -170,16 +171,16 @@
         <td><input class="bg-dark text-light" id="Witchcraft" value="0" type="number"></td>
         <td><input class="bg-dark text-light" id="Recovery" value="0" type="number"></td>
         <td><input class="bg-dark text-light" id="Change" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" id="Enchantment"value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="Enchantment" value="0" type="number"></td>
     </tr>
     <tr class="table-dark">
         <th scope="row">Значение до которого вы хотите повысить навык</th>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
-        <td><input class="bg-dark text-light" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="IllusionValue" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="DestructionValue" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="WitchcraftValue" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="RecoveryValue" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="ChangeValue" value="0" type="number"></td>
+        <td><input class="bg-dark text-light" id="EnchantmentValue" value="0" type="number"></td>
     </tr>
     <tr class="table-dark">
         <th scope="row">Требуется очков обучения</th>
