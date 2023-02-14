@@ -133,17 +133,25 @@ let mageStoneOn = true;
 let thifStoneOn = true;
 
 
-// выбранная раса
-// let chosenRace = document.getElementById('chosenRace');
-// // выбранный камень
-// let chosenStone = document.getElementById('chosenStone');
+//выбранная раса
+let chosenRace = document.getElementById('chosenRace');
+// выбранный камень
+let chosenStone = document.getElementById('chosenStone');
+// выбранный уровень сложности
+let chosenLevel = document.getElementById('chosenLevel');
+let level = document.getElementById('level');
+// выбранный уровень сложности 10 15 20
+let tenLP = document.getElementById('tenLP');
+let fifteenLp = document.getElementById('fifteenLp');
+let twentyLP = document.getElementById('twentyLP');
 
 // камень воина
 function changeWarriorStone() {
 
     if (warriorStoneOn) {
         warriorStoneOn = false;
-        console.log('Камень воина включен')
+        console.log('Камень воина включен');
+        chosenStone.innerText = 'Воин';
         Blacksmith.value = Number(Blacksmith.value) + 5;
         OneHandedWeapon.value = Number(OneHandedWeapon.value) + 5;
         HeavyArmor.value = Number(HeavyArmor.value) + 5;
@@ -167,7 +175,8 @@ function changeMageStone() {
 
     if (mageStoneOn) {
         mageStoneOn = false;
-        console.log('Камень мага включен')
+        console.log('Камень мага включен');
+        chosenStone.innerText = 'Маг';
         Illusion.value = Number(Illusion.value) + 5;
         Destruction.value = Number(Destruction.value) + 5;
         Witchcraft.value = Number(Witchcraft.value) + 5;
@@ -192,7 +201,7 @@ function changeThifStone() {
     if (thifStoneOn) {
         thifStoneOn = false;
         console.log('Камень вора включен')
-        stoneWarrior.innerHTML += ' активен';
+        chosenStone.innerText = 'Вор';
         Evasion.value = Number(Evasion.value) + 5;
         Stealth.value = Number(Stealth.value) + 5;
         Breaking.value = Number(Breaking.value) + 5;
@@ -212,7 +221,7 @@ function changeThifStone() {
 }
 
 function changeArgoStats() {
-
+    chosenRace.innerText = 'Аргонианин';
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -221,7 +230,6 @@ function changeArgoStats() {
     Blocking.value = 5;
 
     Evasion.value = 15;
-    Evasion.classList.add('text-success');
     Stealth.value = 10;
     Breaking.value = 15;
     Pickpocketing.value = 10;
@@ -238,7 +246,7 @@ function changeArgoStats() {
 }
 
 function changeOrcStats() {
-
+    chosenRace.innerText = 'Орк';
     Blacksmith.value = 15;
     OneHandedWeapon.value = 10;
     HeavyArmor.value = 15;
@@ -261,7 +269,7 @@ function changeOrcStats() {
     Enchantment.value = 5;
 }
 function changeNordStats() {
-
+    chosenRace.innerText = 'Норд';
     Blacksmith.value = 15;
     OneHandedWeapon.value = 10;
     HeavyArmor.value = 10;
@@ -284,7 +292,7 @@ function changeNordStats() {
     Enchantment.value = 5;
 }
 function changeRedgarcStats() {
-
+    chosenRace.innerText = 'Редгард';
     Blacksmith.value = 10;
     OneHandedWeapon.value = 20;
     HeavyArmor.value = 5;
@@ -307,7 +315,7 @@ function changeRedgarcStats() {
     Enchantment.value = 5;
 }
 function changeDanmerStats() {
-
+    chosenRace.innerText = 'Данмер';
     Blacksmith.value = 5;
     OneHandedWeapon.value = 15;
     HeavyArmor.value = 5;
@@ -330,7 +338,7 @@ function changeDanmerStats() {
     Enchantment.value = 5;
 }
 function changeImperecStats() {
-
+    chosenRace.innerText = 'Имперец';
     Blacksmith.value = 5;
     OneHandedWeapon.value = 10;
     HeavyArmor.value = 10;
@@ -353,7 +361,7 @@ function changeImperecStats() {
     Enchantment.value = 5;
 }
 function changeBosmerStats() {
-
+    chosenRace.innerText = 'Босмер';
     Blacksmith.value = 15;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -376,7 +384,7 @@ function changeBosmerStats() {
     Enchantment.value = 5;
 }
 function changeCatjitStats() {
-
+    chosenRace.innerText = 'Каджит';
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -399,7 +407,7 @@ function changeCatjitStats() {
     Enchantment.value = 5;
 }
 function changeAltmerStats() {
-
+    chosenRace.innerText = 'Альтмер';
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -423,7 +431,7 @@ function changeAltmerStats() {
 }
 
 function changeBretonStats() {
-
+    chosenRace.innerText = 'Бретон';
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -528,7 +536,22 @@ function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
     needLp.innerHTML = CalculateLPCost(Number(currentSkillValue), minus);
     needGold.innerHTML = CalculateGCost(Number(currentSkillValue), minus);
 }
+function Level10() {
+    // console.log('10');
+    level.innerText = '10LP'
+    tenLP.innerText = 10;
 
+}
+function Level15() {
+    // console.log('15');
+    level.innerText = '15LP'
+    fifteenLp.innerText = 15;
+}
+function Level20() {
+    // console.log('20');
+    level.innerText = '20LP'
+    twentyLP.innerText = 20;
+}
 function formula() {
 
     // расчет лп + золота воин
@@ -559,13 +582,18 @@ function formula() {
     getAllLPFromTable();
     // расчет всех ячеек с золотом со всей таблицы
     getAllGoldFromTable();
+
+    if (tenLP.innerText === '10') {
+        chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 10);
+    }
+    if (fifteenLp.innerText === '15') {
+        chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 15);
+    }
+    if (twentyLP.innerText === '20') {
+        chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 20);
+    }
 }
 
-// function raceAndStone() {
-//     if (raceArgo.click) chosenRace.innerText += ' Аргонианин';
-//     if (raceOrc.click) chosenRace.innerText += ' Орк';
-//
-// }
 raceArgo.addEventListener('click', changeArgoStats);
 raceOrc.addEventListener('click', changeOrcStats);
 raceNord.addEventListener('click', changeNordStats);
@@ -581,6 +609,9 @@ stoneMage.addEventListener('click', changeMageStone);
 stoneThif.addEventListener('click', changeThifStone);
 
 result.addEventListener('click', formula);
-//result.addEventListener('click', raceAndStone);
+
+tenLP.addEventListener('click', Level10);
+fifteenLp.addEventListener('click', Level15);
+twentyLP.addEventListener('click', Level20);
 
 

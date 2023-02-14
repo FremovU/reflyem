@@ -92,15 +92,58 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a><button id="tenLP"     type="submit" class="dropdown-item">10 LP</button></a>
-            <a><button id="fifteenLp"        type="submit" class="dropdown-item">15 LP</button></a>
-            <a><button id="twentyLP"        type="submit" class="dropdown-item">20 LP</button></a>
+            <a><button id="fifteenLp" type="submit" class="dropdown-item">15 LP</button></a>
+            <a><button id="twentyLP"  type="submit" class="dropdown-item">20 LP</button></a>
         </ul>
     </div>
     <!--Выбор количества LP(кнопка)-->
 
     <!--кнопка рассчитать-->
-    <button type="submit" id="result" class="btn btn-danger">Расчитать</button>
+    <button type="submit" id="result" class="btn btn-danger" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">Расчитать</button>
     <!--кнопка рассчитать-->
+
+    <!-- Modal -->
+    <div class="modal fade modal-xl" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Итоги</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<!--                    <img src="assets/image/slidkiy_rulet.png" class="w-25" alt="" srcset="">-->
+                    <table class="table table-bordered border border-5 border-dark">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="fw-bold">Раса</th>
+                            <th scope="col" class="fw-bold">Камень</th>
+                            <th scope="col" class="fw-bold">Уровень сложности</th>
+                            <th scope="col" class="fw-bold">Очки способностей</th>
+                            <th scope="col" class="fw-bold">Необходимо золота</th>
+                            <th scope="col" class="fw-bold">Нужно уровней</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th class="fw-bold" scope="row" id="chosenRace">Не выбрано</th>
+                            <td class="fw-bold" id="chosenStone">Не выбрано</td>
+                            <td class="fw-bold" id="level">Не выбрано</td>
+                            <td class="fw-bold" id="allLPTable"></td>
+                            <td class="fw-bold" id="allGoldTable"></td>
+                            <td class="fw-bold" id="chosenLevel">0</td>
+                        </tr>
+                        <tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Ок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
 </div>
 <table class="table w-100 table-dark table-bordered">
     <thead>
@@ -249,30 +292,6 @@
     </tr>
     </tbody>
 </table>
-
-<!--Таблица результатов-->
-<div class="h-100 w-50 d-flex justify-content-center align-items-center">
-    <table class="table table-bordered  table-dark">
-        <thead>
-        <tr>
-            <th class="text-dark fw-bold" style="background-color: rgb(255, 229, 153)" scope="col">Общее количество очков обучения (вся таблица)</th>
-            <th style="background-color: rgb(217, 210, 233)" scope="col" class="text-dark fw-bold text-center" id="allLPTable">0</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th class="text-dark fw-bold" style="background-color: rgb(255, 229, 153)" scope="row">Общее количество золота (вся таблица)</th>
-            <td style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="allGoldTable">0</p></td>
-        </tr>
-        </tbody>
-    </table>
-<!--    <p class="text-white d-flex justify-content-end align-items-end w-25" id="chosenRace">Раса: </p>-->
-<!--    <p class="text-white d-flex justify-content-end align-items-end w-25" id="chosenStone">Камень: </p>-->
-</div>
-
-<!--Таблица результатов-->
-
-
 
 <script src="assets/mdb/js/mdb.min.js"></script>
 <script src="assets/script/main.js"></script>
