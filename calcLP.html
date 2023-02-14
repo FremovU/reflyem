@@ -5,6 +5,7 @@
     <title>LPcalc</title>
     <link rel="stylesheet" href="assets/mdb/css/mdb.min.css">
     <link rel="stylesheet" href="assets/style/calcLPstyle.css">
+    <link rel="stylesheet" href="assets/style/scrollbar.css">
 </head>
 <body class="bg-dark" style="background-color: black!important;">
 
@@ -12,7 +13,7 @@
 <div class="d-flex justify-content-evenly w-100 mb-3 pt-3">
 
     <!--FAQ-->
-    <button type="button" id="FAQ" class="btn btn-danger" data-mdb-toggle="modal" data-mdb-target="#exampleModal">FAQ</button>
+    <button type="button" id="FAQ" class="btn btn-danger" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Инструкция</button>
     <!--FAQ-->
 
     <!-- Modal -->
@@ -20,11 +21,53 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Как пользоваться калькулятором</h5>
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">Как пользоваться калькулятором</h5>
                     <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="assets/image/slidkiy_rulet.png" class="w-25" alt="" srcset="">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="list-group list-group-light" id="list-tab" role="tablist">
+                                <a class="fw-bold text-center list-group-item list-group-item-action active px-3 border-0" id="list-home-list"
+                                   data-mdb-toggle="list" href="#list-home" role="tab" aria-controls="list-home">1 Шаг</a>
+                                <a class="fw-bold text-center list-group-item list-group-item-action px-3 border-0" id="list-profile-list"
+                                   data-mdb-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">2 Шаг</a>
+                                <a class="fw-bold text-center list-group-item list-group-item-action px-3 border-0" id="list-messages-list"
+                                   data-mdb-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">3 Шаг</a>
+                                <a class="fw-bold text-center list-group-item list-group-item-action px-3 border-0" id="list-messages-list-1"
+                                   data-mdb-toggle="list" href="#list-messages-1" role="tab" aria-controls="list-messages">4 Шаг</a>
+                                <a class="fw-bold text-center list-group-item list-group-item-action px-3 border-0" id="list-settings-list"
+                                   data-mdb-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">5 Шаг</a>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                                     aria-labelledby="list-home-list">
+                                    <span class="fw-bold">Выбираем нужную расу персонажа: </span>
+                                    <img src="assets/image/insruction1.png" alt="" srcset="">
+                                </div>
+                                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                    <span class="fw-bold">Выбираем нужный камень для персонажа: </span>
+                                    <img src="assets/image/insruction2.png" alt="" srcset="">
+                                </div>
+                                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                                    <span class="fw-bold">Выбираем нужный уровень сложности: </span>
+                                    <img src="assets/image/insruction3.png" alt="" srcset="">
+                                </div>
+                                <div class="tab-pane fade" id="list-messages-1" role="tabpanel" aria-labelledby="list-messages-list-1">
+                                    <span class="fw-bold">В первом поле вводим текущее значение нужного навыка: </span> <br>
+                                    <span class="fw-bold">Во втором поле вводим значение навыка до которого вы хотите повысить: </span>
+                                    <img src="assets/image/insruction6.png" alt="" srcset="">
+                                </div>
+                                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                                    <span class="fw-bold">И наконец нажимаем на кнопку "Расчитать" и смотрим на результаты: </span>
+                                    <img src="assets/image/insruction4.png" alt="" srcset="">
+                                    <img class="w-75" src="assets/image/insruction5.png" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Понятно</button>
@@ -143,9 +186,9 @@
         </div>
     </div>
     <!-- Modal -->
-
 </div>
-<table class="table w-100 table-dark table-bordered">
+<div class="h-25 d-flex justify-content-center align-items-center">
+<table class="table table-dark table-bordered">
     <thead>
     <tr>
         <th scope="col" class="text-dark fw-bold" style="background-color: rgb(255, 229, 153)">Описание</th>
@@ -292,7 +335,7 @@
     </tr>
     </tbody>
 </table>
-
+</div>
 <script src="assets/mdb/js/mdb.min.js"></script>
 <script src="assets/script/main.js"></script>
 </body>
