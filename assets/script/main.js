@@ -152,6 +152,8 @@ function changeWarriorStone() {
         warriorStoneOn = false;
         console.log('Камень воина включен');
         chosenStone.innerText = 'Воин';
+        chosenStone.classList.remove('text-danger');
+        chosenStone.classList.add('text-success');
         Blacksmith.value = Number(Blacksmith.value) + 5;
         OneHandedWeapon.value = Number(OneHandedWeapon.value) + 5;
         HeavyArmor.value = Number(HeavyArmor.value) + 5;
@@ -177,6 +179,8 @@ function changeMageStone() {
         mageStoneOn = false;
         console.log('Камень мага включен');
         chosenStone.innerText = 'Маг';
+        chosenStone.classList.remove('text-danger');
+        chosenStone.classList.add('text-success');
         Illusion.value = Number(Illusion.value) + 5;
         Destruction.value = Number(Destruction.value) + 5;
         Witchcraft.value = Number(Witchcraft.value) + 5;
@@ -202,6 +206,8 @@ function changeThifStone() {
         thifStoneOn = false;
         console.log('Камень вора включен')
         chosenStone.innerText = 'Вор';
+        chosenStone.classList.remove('text-danger');
+        chosenStone.classList.add('text-success');
         Evasion.value = Number(Evasion.value) + 5;
         Stealth.value = Number(Stealth.value) + 5;
         Breaking.value = Number(Breaking.value) + 5;
@@ -222,6 +228,8 @@ function changeThifStone() {
 
 function changeArgoStats() {
     chosenRace.innerText = 'Аргонианин';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -242,11 +250,12 @@ function changeArgoStats() {
     Recovery.value = 10;
     Change.value = 10;
     Enchantment.value = 5;
-
 }
 
 function changeOrcStats() {
     chosenRace.innerText = 'Орк';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 15;
     OneHandedWeapon.value = 10;
     HeavyArmor.value = 15;
@@ -270,6 +279,8 @@ function changeOrcStats() {
 }
 function changeNordStats() {
     chosenRace.innerText = 'Норд';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 15;
     OneHandedWeapon.value = 10;
     HeavyArmor.value = 10;
@@ -293,6 +304,8 @@ function changeNordStats() {
 }
 function changeRedgarcStats() {
     chosenRace.innerText = 'Редгард';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 10;
     OneHandedWeapon.value = 20;
     HeavyArmor.value = 5;
@@ -316,6 +329,8 @@ function changeRedgarcStats() {
 }
 function changeDanmerStats() {
     chosenRace.innerText = 'Данмер';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 5;
     OneHandedWeapon.value = 15;
     HeavyArmor.value = 5;
@@ -339,6 +354,8 @@ function changeDanmerStats() {
 }
 function changeImperecStats() {
     chosenRace.innerText = 'Имперец';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 5;
     OneHandedWeapon.value = 10;
     HeavyArmor.value = 10;
@@ -362,6 +379,8 @@ function changeImperecStats() {
 }
 function changeBosmerStats() {
     chosenRace.innerText = 'Босмер';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 15;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -385,6 +404,8 @@ function changeBosmerStats() {
 }
 function changeCatjitStats() {
     chosenRace.innerText = 'Каджит';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -408,6 +429,8 @@ function changeCatjitStats() {
 }
 function changeAltmerStats() {
     chosenRace.innerText = 'Альтмер';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -432,6 +455,8 @@ function changeAltmerStats() {
 
 function changeBretonStats() {
     chosenRace.innerText = 'Бретон';
+    chosenRace.classList.remove('text-danger');
+    chosenRace.classList.add('text-success');
     Blacksmith.value = 5;
     OneHandedWeapon.value = 5;
     HeavyArmor.value = 5;
@@ -504,6 +529,10 @@ function getAllLPFromTable() {
         + Number(needGoldRecovery.innerHTML)
         + Number(needGoldChange.innerHTML)
         + Number(needGoldEnchantment.innerHTML);
+    if (allGoldTable.innerHTML > 0) {
+        allGoldTable.classList.remove('text-danger');
+        allGoldTable.classList.add('text-success');
+    }
 }
 // расчет всех ячеек с золотом с таблицы
 function getAllGoldFromTable() {
@@ -514,8 +543,6 @@ function getAllGoldFromTable() {
         + Number(needLPOneHandedWeapon.innerHTML)
         + Number(needLPShooting.innerHTML)
         + Number(needLPBlocking.innerHTML)
-
-
         + Number(needLPEvasion.innerHTML)
         + Number(needLPStealth.innerHTML)
         + Number(needLPBreaking.innerHTML)
@@ -529,6 +556,11 @@ function getAllGoldFromTable() {
         + Number(needLPRecovery.innerHTML)
         + Number(needLPChange.innerHTML)
         + Number(needLPEnchantment.innerHTML);
+    if (allLPTable.innerHTML > 0) {
+        allLPTable.classList.remove('text-danger');
+        allLPTable.classList.add('text-success');
+    }
+
 }
 // расчет значений из текущего и до которого нужно подня навыка
 function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
@@ -538,9 +570,8 @@ function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
 }
 function Level10() {
     // console.log('10');
-    level.innerText = '10LP'
+    level.innerHTML = '10LP'
     tenLP.innerText = 10;
-
 }
 function Level15() {
     // console.log('15');
@@ -585,12 +616,27 @@ function formula() {
 
     if (tenLP.innerText === '10') {
         chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 10);
+        if (chosenLevel.innerHTML > 0) {
+            chosenLevel.classList.remove('text-danger');
+            chosenLevel.classList.add('text-success');
+        }
     }
+
     if (fifteenLp.innerText === '15') {
         chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 15);
+        if (chosenLevel.innerText > 0) {
+            if (chosenLevel.innerHTML > 0) {
+                chosenLevel.classList.remove('text-danger');
+                chosenLevel.classList.add('text-success');
+            }
+        }
     }
     if (twentyLP.innerText === '20') {
         chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 20);
+        if (chosenLevel.innerText > 0) {
+            chosenLevel.classList.remove('text-danger');
+            chosenLevel.classList.add('text-success');
+        }
     }
 }
 
