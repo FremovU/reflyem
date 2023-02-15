@@ -132,25 +132,78 @@ let warriorStoneOn = true;
 let mageStoneOn = true;
 let thifStoneOn = true;
 
+// для проверки ЛП
+let tenLPOn = true;
+let fifteenLpOn = true;
+let twentyLpOn = true;
 
-//выбранная раса
+//выбранная раса для отображения в модалке расчета
 let chosenRace = document.getElementById('chosenRace');
-// выбранный камень
+// выбранный камень для отображения в модалке расчета
 let chosenStone = document.getElementById('chosenStone');
-// выбранный уровень сложности
+// выбранный уровень сложности для отображения в модалке расчета
 let chosenLevel = document.getElementById('chosenLevel');
-let level = document.getElementById('level');
 // выбранный уровень сложности 10 15 20
-let tenLP = document.getElementById('tenLP');
+let tenLp = document.getElementById('tenLP');
 let fifteenLp = document.getElementById('fifteenLp');
-let twentyLP = document.getElementById('twentyLP');
+let twentyLp = document.getElementById('twentyLP');
+// присваивается значение в зависимоти от уровня сложности и потом на него делить
+let needLvlForUp = 0;
+let needLvlForUpF = document.getElementById('needLvlForUpF');
 
+function tenLpFunc() {
+
+    if (tenLPOn) {
+        tenLPOn = false;
+        needLvlForUp = 10;
+        tenLP.classList.add('text-success');
+        chosenLevel.innerText = '10LP';
+        chosenLevel.classList.remove('text-danger');
+        chosenLevel.classList.add('text-success');
+    } else if (!tenLPOn) {
+        needLvlForUp = 0;
+        tenLP.classList.remove('text-success');
+        tenLPOn = true;
+    }
+}
+function fifteenLpFunc() {
+
+    if (fifteenLpOn) {
+        fifteenLpOn = false;
+        needLvlForUp = 15;
+        fifteenLp.classList.add('text-success');
+        chosenLevel.innerText = '15LP';
+        chosenLevel.classList.remove('text-danger');
+        chosenLevel.classList.add('text-success');
+    } else if (!fifteenLpOn) {
+        needLvlForUp = 0;
+        fifteenLp.classList.remove('text-success');
+        fifteenLpOn = true;
+    }
+}
+
+function twentyLpFunc() {
+    if (twentyLpOn) {
+        twentyLpOn = false;
+        needLvlForUp = 20;
+        twentyLp.classList.add('text-success');
+        chosenLevel.innerText = '20LP';
+        chosenLevel.classList.remove('text-danger');
+        chosenLevel.classList.add('text-success');
+    } else if (!twentyLpOn) {
+        needLvlForUp = 0;
+        twentyLp.classList.remove('text-success');
+        twentyLpOn = true;
+    }
+
+}
 // камень воина
 function changeWarriorStone() {
 
     if (warriorStoneOn) {
         warriorStoneOn = false;
-        console.log('Камень воина включен');
+        // console.log('Камень воина включен');
+        stoneWarrior.classList.add('text-success');
         chosenStone.innerText = 'Воин';
         chosenStone.classList.remove('text-danger');
         chosenStone.classList.add('text-success');
@@ -164,6 +217,7 @@ function changeWarriorStone() {
     } else if (!warriorStoneOn) {
         warriorStoneOn = true;
         console.log('Камень воина выключен')
+        stoneWarrior.classList.remove('text-success');
         Blacksmith.value = Number(Blacksmith.value) - 5;
         OneHandedWeapon.value = Number(OneHandedWeapon.value) - 5;
         HeavyArmor.value = Number(HeavyArmor.value) - 5;
@@ -177,7 +231,8 @@ function changeMageStone() {
 
     if (mageStoneOn) {
         mageStoneOn = false;
-        console.log('Камень мага включен');
+        // console.log('Камень мага включен');
+        stoneMage.classList.add('text-success');
         chosenStone.innerText = 'Маг';
         chosenStone.classList.remove('text-danger');
         chosenStone.classList.add('text-success');
@@ -191,6 +246,7 @@ function changeMageStone() {
     } else if (!mageStoneOn) {
         mageStoneOn = true;
         console.log('Камень мага выключен')
+        stoneMage.classList.remove('text-success');
         Illusion.value = Number(Illusion.value) - 5;
         Destruction.value = Number(Destruction.value) - 5;
         Witchcraft.value = Number(Witchcraft.value) - 5;
@@ -204,7 +260,8 @@ function changeThifStone() {
 
     if (thifStoneOn) {
         thifStoneOn = false;
-        console.log('Камень вора включен')
+        // console.log('Камень вора включен');
+        stoneThif.classList.add('text-success');
         chosenStone.innerText = 'Вор';
         chosenStone.classList.remove('text-danger');
         chosenStone.classList.add('text-success');
@@ -216,7 +273,8 @@ function changeThifStone() {
         Alchemy.value = Number(Alchemy.value) + 5;
     } else if (!thifStoneOn) {
         thifStoneOn = true;
-        console.log('Камень вора выключен')
+        console.log('Камень вора выключен');
+        stoneThif.classList.remove('text-success');
         Evasion.value = Number(Evasion.value) - 5;
         Stealth.value = Number(Stealth.value) - 5;
         Breaking.value = Number(Breaking.value) - 5;
@@ -568,21 +626,6 @@ function calcLpAndGold(currentSkillValue, countValue, needLp, needGold) {
     needLp.innerHTML = CalculateLPCost(Number(currentSkillValue), minus);
     needGold.innerHTML = CalculateGCost(Number(currentSkillValue), minus);
 }
-function Level10() {
-    // console.log('10');
-    level.innerHTML = '10LP'
-    tenLP.innerText = 10;
-}
-function Level15() {
-    // console.log('15');
-    level.innerText = '15LP'
-    fifteenLp.innerText = 15;
-}
-function Level20() {
-    // console.log('20');
-    level.innerText = '20LP'
-    twentyLP.innerText = 20;
-}
 function formula() {
 
     // расчет лп + золота воин
@@ -614,29 +657,25 @@ function formula() {
     // расчет всех ячеек с золотом со всей таблицы
     getAllGoldFromTable();
 
-    if (tenLP.innerText === '10') {
-        chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 10);
-        if (chosenLevel.innerHTML > 0) {
-            chosenLevel.classList.remove('text-danger');
-            chosenLevel.classList.add('text-success');
-        }
-    }
-
-    if (fifteenLp.innerText === '15') {
-        chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 15);
-        if (chosenLevel.innerText > 0) {
-            if (chosenLevel.innerHTML > 0) {
-                chosenLevel.classList.remove('text-danger');
-                chosenLevel.classList.add('text-success');
-            }
-        }
-    }
-    if (twentyLP.innerText === '20') {
-        chosenLevel.innerText = Math.ceil(Number(allLPTable.innerHTML) / 20);
-        if (chosenLevel.innerText > 0) {
-            chosenLevel.classList.remove('text-danger');
-            chosenLevel.classList.add('text-success');
-        }
+    switch (needLvlForUp) {
+        case 10:
+            needLvlForUp = Math.ceil(Number(allLPTable.innerHTML) / Number(needLvlForUp));
+            needLvlForUpF.innerHTML = needLvlForUp;
+            needLvlForUpF.classList.remove('text-danger');
+            needLvlForUpF.classList.add('text-success');
+            break;
+        case 15:
+            needLvlForUp = Math.ceil(Number(allLPTable.innerHTML) / Number(needLvlForUp));
+            needLvlForUpF.innerHTML = needLvlForUp;
+            needLvlForUpF.classList.remove('text-danger');
+            needLvlForUpF.classList.add('text-success');
+            break;
+        case 20:
+            needLvlForUp = Math.ceil(Number(allLPTable.innerHTML) / Number(needLvlForUp));
+            needLvlForUpF.innerHTML = needLvlForUp;
+            needLvlForUpF.classList.remove('text-danger');
+            needLvlForUpF.classList.add('text-success');
+            break;
     }
 }
 
@@ -656,8 +695,8 @@ stoneThif.addEventListener('click', changeThifStone);
 
 result.addEventListener('click', formula);
 
-tenLP.addEventListener('click', Level10);
-fifteenLp.addEventListener('click', Level15);
-twentyLP.addEventListener('click', Level20);
+tenLp.addEventListener('click', tenLpFunc);
+fifteenLp.addEventListener('click', fifteenLpFunc);
+twentyLp.addEventListener('click', twentyLpFunc);
 
 
