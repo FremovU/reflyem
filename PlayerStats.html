@@ -56,8 +56,8 @@
             <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Зелья</button>
             <div id="myDropdown" class="dropdown-content">
-                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                <a href="#about"><div class="form-check">
+                <label for="myInput"></label><input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="#"><div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                     <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
                 </div></a>
@@ -78,8 +78,8 @@
         </thead>
         <tbody>
         <tr class="table-danger">
-            <th scope="row">HP</th>
-            <td>100</td>
+            <th scope="row" >HP</th>
+            <td aria-valuemin="0" id="Hp">100</td>
             <td>1.0</td>
         </tr>
 

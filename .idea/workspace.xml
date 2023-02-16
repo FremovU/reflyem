@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="lvlformulafix">
-      <change afterPath="$PROJECT_DIR$/PlayerStats.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/script/PlayerStats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/script/dropDown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/style/dropDown.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/reflyem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reflyem.iml" afterDir="false" />
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="Person">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerStats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/script/PlayerStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PlayerStats.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,8 @@
       <workItem from="1676471262655" duration="11351000" />
       <workItem from="1676487631483" duration="5000" />
       <workItem from="1676490045623" duration="2754000" />
-      <workItem from="1676554313211" duration="3547000" />
+      <workItem from="1676554313211" duration="4141000" />
+      <workItem from="1676566698963" duration="723000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -411,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676492810067</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Person">
+      <created>1676557945976</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1676557945976</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="discord" />
     <MESSAGE value="borders" />
     <MESSAGE value="font fix" />
     <MESSAGE value="buttons" />
@@ -454,6 +458,7 @@
     <MESSAGE value="borderColor+" />
     <MESSAGE value="modalresult" />
     <MESSAGE value="lvlformulafix" />
-    <option name="LAST_COMMIT_MESSAGE" value="lvlformulafix" />
+    <MESSAGE value="Person" />
+    <option name="LAST_COMMIT_MESSAGE" value="Person" />
   </component>
 </project>
