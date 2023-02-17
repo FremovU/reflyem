@@ -162,9 +162,7 @@
                             <th scope="col" class="fw-bold border border-3 border-dark text-center">Раса</th>
                             <th scope="col" class="fw-bold border border-3 border-dark text-center">Камень</th>
                             <th scope="col" class="fw-bold border border-3 border-dark text-center">Уровень сложности</th>
-                            <th scope="col" class="fw-bold border border-3 border-dark text-center">Очки способностей</th>
-                            <th scope="col" class="fw-bold border border-3 border-dark text-center">Необходимо золота</th>
-                            <th scope="col" class="fw-bold border border-3 border-dark text-center">Нужно уровней</th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -172,12 +170,22 @@
                             <th class="fw-bold border border-3 border-dark text-danger text-center" scope="row" id="chosenRace">Не выбрано</th>
                             <td class="fw-bold border border-3 border-dark text-danger text-center" id="chosenStone">Не выбрано</td>
                             <td class="fw-bold border border-3 border-dark text-danger text-center" id="chosenLevel">Не выбрано</td>
+
+                        </tr>
+                        <tr>
+                        </tbody>
+                    </table>
+                    <table  class="table table-bordered border border-5 border-dark text-dark" style="background-color: rgb(217, 210, 233)">
+                        <tr>
+                            <th scope="col" class="fw-bold border border-3 border-dark text-center">Очки способностей</th>
+                            <th scope="col" class="fw-bold border border-3 border-dark text-center">Необходимо золота</th>
+                            <th scope="col" class="fw-bold border border-3 border-dark text-center">Нужно уровней</th>
+                        </tr>
+                        <tr>
                             <td class="fw-bold border border-3 border-dark text-danger text-center" id="allLPTable">0</td>
                             <td class="fw-bold border border-3 border-dark text-danger text-center" id="allGoldTable">0</td>
                             <td class="fw-bold border border-3 border-dark text-danger text-center" id="needLvlForUpF">0</td>
                         </tr>
-                        <tr>
-                        </tbody>
                     </table>
                 </div>
                 <div class="modal-footer" style="background-color: rgb(255, 229, 153)">
@@ -207,134 +215,134 @@
     <!--Воин-->
     <tr class="table-dark">
         <th scope="row" class="text-dark mw-100 text-center fw-bold border border-3 border-dark" style="background-color: rgb(207, 226, 243)">Текущее значение навыка</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Blacksmith" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="OneHandedWeapon" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="HeavyArmor" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="TwoHandedWeapon" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Shooting" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Blocking" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Blacksmith" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="OneHandedWeapon" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="HeavyArmor" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="TwoHandedWeapon" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Shooting" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Blocking" value="0" type="number"></td>
     </tr>
 
     <tr class="table-dark">
         <th class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Значение до которого вы хотите повысить навык</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="BlacksmithValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="OneHandedWeaponValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="HeavyArmorValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="TwoHandedWeaponValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="ShootingValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="BlockingValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="BlacksmithValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="OneHandedWeaponValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="HeavyArmorValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="TwoHandedWeaponValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="ShootingValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="BlockingValue" type="number"></td>
     </tr>
-    <tr class="table-dark">
+    <tr class="table-dark text-center text-dark fw-bold">
         <th class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Требуется очков обучения</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPBlacksmith">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPOneHandedWeapon">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPHeavyArmor">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPTwoHandedWeapon">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPShooting">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPBlocking">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPBlacksmith">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPOneHandedWeapon">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPHeavyArmor">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPTwoHandedWeapon">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPShooting">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPBlocking">0</p></td>
     </tr>
-    <tr class="table-dark">
+    <tr class="table-dark text-center text-dark fw-bold">
         <th class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Требуется золота для обучения</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldBlacksmith">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldOneHandedWeapon">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldHeavyArmor">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldTwoHandedWeapon">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldShooting">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldBlocking">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldBlacksmith">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldOneHandedWeapon">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldHeavyArmor">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldTwoHandedWeapon">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldShooting">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldBlocking">0</p></td>
     </tr>
     <!--        Ловкач-->
-    <tr class="table-dark border border-3 border-dark">
+    <tr class="table-dark border border-3 border-dark text-dark fw-bold text-center  border-dark">
         <th scope="row" class="text-dark fw-bold text-center border border-3 border-dark fw-bold" style="background-color: rgb(255, 229, 153)">Описание</th>
-        <td style="background-color: rgb(182, 215, 168)" class="text-dark fw-bold text-center border border-3 border-dark">Уклонение</td>
-        <td style="background-color: rgb(182, 215, 168)" class="text-dark fw-bold text-center border border-3 border-dark">Скрытность</td>
-        <td style="background-color: rgb(182, 215, 168)" class="text-dark fw-bold text-center border border-3 border-dark">Взлом</td>
-        <td style="background-color: rgb(182, 215, 168)" class="text-dark fw-bold text-center border border-3 border-dark">Карманные кражи</td>
-        <td style="background-color: rgb(182, 215, 168)" class="text-dark fw-bold text-center border border-3 border-dark">Красноречие</td>
-        <td style="background-color: rgb(182, 215, 168)" class="text-dark fw-bold text-center border border-3 border-dark">Алхимия</td>
+        <td style="background-color: rgb(182, 215, 168)">Уклонение</td>
+        <td style="background-color: rgb(182, 215, 168)">Скрытность</td>
+        <td style="background-color: rgb(182, 215, 168)">Взлом</td>
+        <td style="background-color: rgb(182, 215, 168)">Карманные кражи</td>
+        <td style="background-color: rgb(182, 215, 168)">Красноречие</td>
+        <td style="background-color: rgb(182, 215, 168)">Алхимия</td>
     </tr>
     <tr class="table-dark">
         <th  scope="row" class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)">Текущее значение навыка</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Evasion" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Stealth" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Breaking" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Pickpocketing" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Speech" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Alchemy" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Evasion" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Stealth" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Breaking" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Pickpocketing" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Speech" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Alchemy" value="0" type="number"></td>
 
     </tr>
     <tr class="table-dark">
         <th class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Значение до которого вы хотите повысить навык</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="EvasionValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="StealthValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="BreakingValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="PickpocketingValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="SpeechValue" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" value="0" id="AlchemyValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="EvasionValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="StealthValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="BreakingValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="PickpocketingValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="SpeechValue" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" value="0" id="AlchemyValue" type="number"></td>
     </tr>
-    <tr class="table-dark">
+    <tr class="table-dark text-center text-dark fw-bold">
         <th class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Требуется очков обучения</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPEvasion">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPStealth">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPBreaking">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPPickpocketing">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPSpeech">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needLPAlchemy">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPEvasion">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPStealth">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPBreaking">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPPickpocketing">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPSpeech">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPAlchemy">0</p></td>
 
     </tr>
-    <tr class="table-dark">
-        <th class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Требуется золота для обучения</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldEvasion">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldStealth">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldBreaking">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldPickpocketing">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldSpeech">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-center text-dark fw-bold" id="needGoldAlchemy">0</p></td>
+    <tr class="table-dark text-center text-dark fw-bold">
+        <th class="text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)" scope="row">Требуется золота для обучения</th>
+        <td style="background-color: rgb(217, 210, 233)"><p id="needGoldEvasion">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldStealth">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldBreaking">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldPickpocketing">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldSpeech">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldAlchemy">0</p></td>
     </tr>
-    <!--        Маг-->
-    <tr class="table-dark border border-3 border-dark">
-        <th scope="row" class="text-dark fw-bold text-center border border-3 border-dark fw-bold" style="background-color: rgb(255, 229, 153)">Описание</th>
-        <td style="background-color: rgb(164, 194, 244)" class="text-dark fw-bold text-center border border-3 border-dark">Иллюзия</td>
-        <td style="background-color: rgb(164, 194, 244)" class="text-dark fw-bold text-center border border-3 border-dark">Разрушение</td>
-        <td style="background-color: rgb(164, 194, 244)" class="text-dark fw-bold text-center border border-3 border-dark">Колдовство</td>
-        <td style="background-color: rgb(164, 194, 244)" class="text-dark fw-bold text-center border border-3 border-dark">Восстановление</td>
-        <td style="background-color: rgb(164, 194, 244)" class="text-dark fw-bold text-center border border-3 border-dark">Изменение</td>
-        <td style="background-color: rgb(164, 194, 244)" class="text-dark fw-bold text-center border border-3 border-dark">Зачарование</td>
+    <!--Маг-->
+    <tr class="table-dark border border-3 border-dark text-dark fw-bold text-center">
+        <th scope="row" class="fw-bold" style="background-color: rgb(255, 229, 153)">Описание</th>
+        <td style="background-color: rgb(164, 194, 244)" >Иллюзия</td>
+        <td style="background-color: rgb(164, 194, 244)" >Разрушение</td>
+        <td style="background-color: rgb(164, 194, 244)" >Колдовство</td>
+        <td style="background-color: rgb(164, 194, 244)" >Восстановление</td>
+        <td style="background-color: rgb(164, 194, 244)" >Изменение</td>
+        <td style="background-color: rgb(164, 194, 244)" >Зачарование</td>
     </tr>
     <tr class="table-dark ">
         <th scope="row" class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)">Текущее значение навыка</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0 " id="Illusion" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Destruction" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Witchcraft" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Recovery" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Change" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="Enchantment" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0 " id="Illusion" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Destruction" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Witchcraft" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Recovery" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Change" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="Enchantment" value="0" type="number"></td>
     </tr>
     <tr class="table-dark">
         <th scope="row" class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)">Значение до которого вы хотите повысить навык</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="IllusionValue" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="DestructionValue" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="WitchcraftValue" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="RecoveryValue" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="ChangeValue" value="0" type="number"></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border border-0" id="EnchantmentValue" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="IllusionValue" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="DestructionValue" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="WitchcraftValue" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="RecoveryValue" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="ChangeValue" value="0" type="number"></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><input class="border-0" id="EnchantmentValue" value="0" type="number"></td>
     </tr>
-    <tr class="table-dark">
+    <tr class="table-dark text-dark fw-bold text-center">
         <th scope="row" class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)">Требуется очков обучения</th>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needLPIllusion">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needLPDestruction">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needLPWitchcraft">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needLPRecovery">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needLPChange">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needLPEnchantment">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPIllusion">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPDestruction">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPWitchcraft">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPRecovery">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPChange">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needLPEnchantment">0</p></td>
     </tr>
-    <tr class="table-dark" >
-        <td class="text-dark text-center border border-3 border-dark fw-bold" style="background-color: rgb(207, 226, 243)"><p>Требуется золота для обучения</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needGoldIllusion">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needGoldDestruction">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needGoldWitchcraft">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needGoldRecovery">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needGoldChange">0</p></td>
-        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p class="text-dark fw-bold text-center" id="needGoldEnchantment">0</p></td>
+    <tr class="table-dark text-dark fw-bold text-center border border-3 border-dark" >
+        <td class="border border-3 border-dark" style="background-color: rgb(207, 226, 243)"><p>Требуется золота для обучения</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldIllusion">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldDestruction">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldWitchcraft">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldRecovery">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldChange">0</p></td>
+        <td class="border border-3 border-dark" style="background-color: rgb(217, 210, 233)"><p id="needGoldEnchantment">0</p></td>
     </tr>
     </tbody>
 </table>
