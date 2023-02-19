@@ -29,11 +29,7 @@
           href="assets/mdb/css/mdb.min.css"
           rel="stylesheet"
   />
-    <!-- MDB -->
-    <script
-            type="text/javascript"
-            src="assets/mdb/js/mdb.min.js"
-    ></script>
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
@@ -43,75 +39,167 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: rgba(0, 0, 0, 0.8)!important;">
-    <div class="container-fluid">
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
-            <i class="fas fa-bars text-light"></i>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active text-white " aria-current="page" href="index.html#Main">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white ms-3 me-3" href="index.html#Base">База знаний</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white  me-3" href="index.html#Discord">Дискорд</a>
-                </li>
-                <li class="nav-item text-white">
-                    <a class="nav-link text-white " href="index.html#Donation">Поддержка</a>
-                </li>
-                <li class="nav-item p-0 fs-5 ms-2">
-                    <div class="dropdown text-center" style="background-color: rgba(0, 0, 0, 0)!important;">
-                        <button
-                                class="btn btn-black text-light dropdown-toggle"
-                                type="button"
-                                id="dropdownMenuButton"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: rgba(0, 0, 0, 0.8)!important;">-->
+<!--    <div class="container-fluid">-->
+<!--        <button-->
+<!--                class="navbar-toggler"-->
+<!--                type="button"-->
+<!--                data-mdb-toggle="collapse"-->
+<!--                data-mdb-target="#navbarNav"-->
+<!--                aria-controls="navbarNav"-->
+<!--                aria-expanded="false"-->
+<!--                aria-label="Toggle navigation"-->
+<!--        >-->
+<!--            <i class="fas fa-bars text-light"></i>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">-->
+<!--            <ul class="navbar-nav">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link active text-white " aria-current="page" href="index.html#Main">Главная</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link text-white ms-3 me-3" href="index.html#Base">База знаний</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link text-white  me-3" href="index.html#Discord">Дискорд</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item text-white">-->
+<!--                    <a class="nav-link text-white " href="index.html#Donation">Поддержка</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item p-0 fs-5 ms-2">-->
+<!--                    <div class="dropdown text-center" style="background-color: rgba(0, 0, 0, 0)!important;">-->
+<!--                        <button-->
+<!--                                class="btn btn-black text-light dropdown-toggle"-->
+<!--                                type="button"-->
+<!--                                id="dropdownMenuButton"-->
+<!--                                data-mdb-toggle="dropdown"-->
+<!--                                aria-expanded="false"-->
 
 
-                        >
-                         <span class="text-lowercase"><span class="text-uppercase">Д</span>ля игроков</span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="builds.html">Билд</a></li>
-                            <li><a class="dropdown-item" href="guides.html">Гайды</a></li>
-                            <li><a class="dropdown-item" href="#">Гайды</a></li>
-                        </ul>
-                    </div>
-                </li>
+<!--                        >-->
+<!--                         <span class="text-lowercase"><span class="text-uppercase">Д</span>ля игроков</span>-->
+<!--                        </button>-->
+<!--                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--                            <li><a class="dropdown-item" href="builds.html">Билд</a></li>-->
+<!--                            <li><a class="dropdown-item" href="guides.html">Гайды</a></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Гайды</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </li>-->
 
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Блок Главная -->
-<!-- Jumbotron -->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+
 <!-- Background image -->
 <div
-        class="bg-image d-flex justify-content-center align-items-center"
+        class="bg-image container-fluid"
         style="
     background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp');
     height: 100vh;
   "
 >
-    <h1 class="text-white">Page title</h1>
+    <div class="d-flex justify-content-center mb-5">
+    <h1 class="text-white align-items-start mt-5">Личеса(Лоли - Тряпотанк)</h1>
+    </div>
+
+        <!--    Контейнер с 3мя таблицами-->
+    <div class="container-fluid d-flex justify-content-center">
+    <div class="d-flex w-25 h-25">
+        <table class="table text-white fw-bold text-center table-bordered">
+            <thead>
+            <tr>
+                <th scope="col" colspan="4">Раса</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Альтмер</th>
+                <td colspan="2">Плюсы</td>
+                <td colspan="2">Минусы</td>
+            </tr>
+            <tr>
+                <th scope="row">Бретон</th>
+                <td colspan="2">Хороший реген и запас маны, что очень помогает по началу, увеличенный урон от чарок(чуть быстрее будут умирать враги от бритвы)</td>
+            </tr>
+            <tr>
+                <th scope="row">Аргонианин</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex w-25 h-25 ">
+        <table class="table text-white fw-bold text-center">
+            <thead>
+            <tr>
+                <th scope="col" colspan="4">Камень</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex w-25 h-25">
+        <table class="table  text-white fw-bold text-center">
+            <thead>
+            <tr>
+                <th scope="col" colspan="4">Благо</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <!--    Контейнер с 3мя таблицами-->
+
+
 </div>
-<!-- Background image -->
-<!-- Jumbotron -->
+
 <!-- Блок Главная -->
 
 
-
+<!-- MDB -->
+<script type="text/javascript" src="assets/mdb/js/mdb.min.js"></script>
 </body>
 </html>

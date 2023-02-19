@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="Person-checkBox">
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="deleteduseles">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/reflyem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/reflyem.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerStats.html" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerStats.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/script/PlayerStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/PlayerStats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/script/dropDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/script/dropDown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calcLP.html" beforeDir="false" afterPath="$PROJECT_DIR$/calcLP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mag-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/mag-1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Frem/Desktop/reflyem&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AtomConfig&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -126,7 +126,13 @@
       <workItem from="1676569970386" duration="13000" />
       <workItem from="1676570008493" duration="22000" />
       <workItem from="1676570053570" duration="1887000" />
-      <workItem from="1676646518868" duration="1868000" />
+      <workItem from="1676646518868" duration="2160000" />
+      <workItem from="1676648741654" duration="3000" />
+      <workItem from="1676659821135" duration="43000" />
+      <workItem from="1676733258113" duration="38000" />
+      <workItem from="1676795264407" duration="262000" />
+      <workItem from="1676795546355" duration="1722000" />
+      <workItem from="1676815384781" duration="2032000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1670441122127</created>
@@ -429,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676567521924</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="deleteduseles">
+      <created>1676648446019</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1676648446019</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="font fix" />
     <MESSAGE value="buttons" />
     <MESSAGE value="fix navbar" />
     <MESSAGE value="fix donatypay" />
@@ -472,6 +484,7 @@
     <MESSAGE value="lvlformulafix" />
     <MESSAGE value="Person" />
     <MESSAGE value="Person-checkBox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Person-checkBox" />
+    <MESSAGE value="deleteduseles" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleteduseles" />
   </component>
 </project>
