@@ -35,6 +35,7 @@
                 >Оружие</a
                 >
             </li>
+
             <li class="nav-item" role="presentation">
                 <a
                         class="nav-link"
@@ -56,20 +57,34 @@
                         role="tab"
                         aria-controls="ex1-pills-3"
                         aria-selected="false"
-                >Аксессуары</a
+                >кольца</a
                 >
             </li>
         </ul>
         <!-- Pills navs -->
 
+        <!--Search-->
+        <div class="input-group d-flex ms-auto w-100 justify-content-end me-5 mb-5" style="width: 400px!important; left: -140px">
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label text-white" for="form1">Search</label>
+            </div>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+
         <!-- Pills content -->
         <div class="tab-content d-flex justify-content-center align-items-center" id="ex1-content">
+
             <div
                     class="tab-pane fade show active text-info fs-5 fw-bold"
                     id="ex1-pills-1"
                     role="tabpanel"
                     aria-labelledby="ex1-tab-1"
             >
+
                 <?php
                 error_reporting(E_ALL);
                 ini_set('display_errors', 'on');
@@ -81,26 +96,56 @@
                 $name = 'Items';
 
                 $link = mysqli_connect($host, $user, $pass, $name);
-                $query = 'SELECT * FROM `wearons`';
-                $result = mysqli_query($link, $query) or die(mysqli_error($link));
+                $query_all_from_WEARON = 'SELECT * FROM `WEARON`';
+                $result = mysqli_query($link, $query_all_from_WEARON) or die(mysqli_error($link));
                 for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
                 foreach ($data as $elem): ?>
-                <table class="table text-danger table-bordered">
-                    <thead>
-                    <tr>
-                        <th scope="col"><?=$elem['Name']?></th>
-                        <th scope="col"><?=$elem['Description']?></th>
-                    </tr>
-                    </thead>
-                </table>
+                    <table class="table bg-black text-white table-bordered text-center">
+                        <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Название</th>
+                            <th scope="col">Описание</th>
+                            <th scope="col">Материал</th>
+                            <th scope="col">Вес</th>
+                            <th scope="col">Базовый урон</th>
+                            <th scope="col">Местонахождение</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th><img style="width: 35px;" src="<?=$elem['image']?>" alt="dagger"></th>
+                            <td><?=$elem['name']?></td>
+                            <td><?=$elem['description']?></td>
+                            <td><?=$elem['material']?></td>
+                            <td><?=$elem['weight']?> кг</td>
+                            <td><?=$elem['baseDamage']?></td>
+                            <td><?=$elem['location']?></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 <?php endforeach;
                 ?>
 
+
 </div>
             <div class="tab-pane fade " id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                Tab 2 content
+
+                <table class="text-danger">
+                    <tr>
+                        <td data-info="<?=$elem['Description']?>"><?=$elem['Name']?></td>
+                        <td data-info="Информация о ячейке 2">Ячейка 2</td>
+                        <td data-info="Информация о ячейке 3">Ячейка 3</td>
+                    </tr>
+                    <tr>
+                        <td data-info="Информация о ячейке 4">Ячейка 4</td>
+                        <td data-info="Информация о ячейке 5">Ячейка 5</td>
+                        <td data-info="Информация о ячейке 6">Ячейка 6</td>
+                    </tr>
+                </table>
             </div>
+
             <div class="tab-pane fade" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">
                 Tab 3 content
             </div>

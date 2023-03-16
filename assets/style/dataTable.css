@@ -1,0 +1,62 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    position: relative;
+}
+
+/* Скрыть модальное окно по умолчанию */
+td::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Показать модальное окно при наведении */
+td:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Стилизация модального окна */
+td::before {
+    width: 450px;
+    height: 150px;
+    content: attr(data-info);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Показать модальное окно при наведении */
+td:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Скрыть модальное окно при убирании курсора */
+td:not(:hover)::before {
+    visibility: hidden;
+    opacity: 0;
+}
