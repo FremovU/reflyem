@@ -70,31 +70,33 @@
                     role="tabpanel"
                     aria-labelledby="ex1-tab-1"
             >
-                <div>
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>City</th>
-                        </tr>
-                        <script>
-                            let people = [
-                                { name: 'John', age: 25, city: 'New York' },
-                                { name: 'Jane', age: 30, city: 'Chicago' },
-                                { name: 'Bob', age: 27, city: 'Los Angeles' }
-                            ];
+                <?php
+                error_reporting(E_ALL);
+                ini_set('display_errors', 'on');
+                mb_internal_encoding('UTF-8');
 
-                            for (let i = 0; i < people.length; i++) {
-                                let person = people[i];
-                                document.write('<tr>');
-                                document.write('<td>' + person.name + '</td>');
-                                document.write('<td>' + person.age + '</td>');
-                                document.write('<td>' + person.city + '</td>');
-                                document.write('</tr>');
-                            }
-                        </script>
-                    </table>
-            </div>
+                $host = 'localhost';
+                $user = 'root';
+                $pass = '';
+                $name = 'Items';
+
+                $link = mysqli_connect($host, $user, $pass, $name);
+                $query = 'SELECT * FROM `wearons`';
+                $result = mysqli_query($link, $query) or die(mysqli_error($link));
+                for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+
+                foreach ($data as $elem): ?>
+                <table class="table text-danger table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col"><?=$elem['Name']?></th>
+                        <th scope="col"><?=$elem['Description']?></th>
+                    </tr>
+                    </thead>
+                </table>
+                <?php endforeach;
+                ?>
+
 </div>
             <div class="tab-pane fade " id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
                 Tab 2 content
@@ -109,6 +111,5 @@
 
 
 <script src="assets/mdb/js/mdb.min.js"></script>
-<script src="assets/script/dataBase.js"></script>
 </body>
 </html>
