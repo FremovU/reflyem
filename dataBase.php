@@ -26,6 +26,7 @@
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
     $data = get_wearons($start, $per_page);
+    $armor = get_armors($start, $per_page);
     ?>
 </head>
 <body>
@@ -97,16 +98,13 @@
                     </div>
                 </form>
                 </div>
-                <?php
-                countPeople($res); // Функция вывода пользователей
-                ?>
 
             <!--таблица в первом пилсе-->
                 <div class="container-fluid d-flex justify-content-center h-100">
                 <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-75 ms-auto" style="width: 1000px!important;">
                     <thead>
                     <tr>
-
+                        <th scope="col"></th>
                         <th class="text-start" scope="col">Название</th>
                         <th scope="col">Описание</th>
                         <th scope="col">Материал</th>
@@ -129,9 +127,11 @@
                    else{
                        $data = get_wearons($start, $per_page);
                    }?>
+
                     <?php foreach ($data as $elem): ?>
                         <tr>
-                            <td style="width: 5%; height: 45px;"><?php echo $elem['name']; ?></td>
+                            <td style="width: 15%; height: 45px"><img style="height: 60px;" src="<?php echo $elem['image']; ?>" alt="img"></td>
+                            <td style="width: 5%; height: 45px!important;"><?php echo $elem['name']; ?></td>
                             <td style="width: 45%;"><?php echo $elem['description']; ?></td>
                             <td style="width: 15%;"><?php echo $elem['material']; ?></td>
                             <td style="width: 5%;"><?php echo $elem['weight']; ?></td>
@@ -141,10 +141,9 @@
                     </tbody>
                 </table>
 
-
                     <div class="fw-bold text-white fs-5 shadow-5-strong container-fluid h-100 w-25 me-auto d-flex justify-content-center flex-column align-items-center ms-3" style="width: 250px!important;">
                         <div class="form-check">
-
+                                <h2>Сортировка</h2>
                             <form action="dataBase.php" method="post">
                                 <label class="form-check-label">
                                     <input type="radio" class="form-check-input" name="wearon" value="spear">
@@ -158,34 +157,58 @@
                                 <label class="form-check-label">
                                     <input type="radio" class="form-check-input" name="wearon" value="wearon">
                                 </label> Всё оружие<br>
-                                <input type="submit" class="btn btn-primary mt-3" value="Отправить">
+                                <input type="submit" class="btn btn-primary mt-3" value="Подтвердить">
                             </form>
 
                         </div>
                         <!-- Default checkbox -->
-                        <div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
-                            </div>
-
-                        </div>
+<!--                        <div>-->
+<!--                            <div class="form-check">-->
+<!--                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />-->
+<!--                                <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>-->
+<!--                                <a href="assets/php/index.php">1</a>-->
+<!--                            </div>-->
+<!---->
+<!--                        </div>-->
                     </div>
-
-
                 </div>
 
                 <div class="container-fluid d-flex justify-content-center h-100">
-                <?php echo $pagination;  ?>
+                    <?php
+                    echo $pagination;
+                    ?>
                 </div>
-
-
             </div>
 
-
-
             <div class="tab-pane fade " id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                2
+                <div class="container-fluid d-flex justify-content-center h-100">
+                    <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-75 ms-auto" style="width: 1000px!important;">
+                        <thead>
+                        <tr>
+                            <th class="text-start" scope="col">Название</th>
+                            <th scope="col">Шлем</th>
+                            <th scope="col">Броня</th>
+                            <th scope="col">Перчатки</th>
+                            <th scope="col">Сапоги</th>
+                            <th scope="col">Местонахождение</th>
+                            <th scope="col">Бонус сета</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($armor as $elem): ?>
+                            <tr>
+                                <td style="width: 15%;"><?php echo $elem['title']; ?></td>
+                                <td style="width: 15%;"><?php echo $elem['helmet']; ?></td>
+                                <td style="width: 15%;"><?php echo $elem['body_armor']; ?></td>
+                                <td style="width: 15%;"><?php echo $elem['gloves']; ?></td>
+                                <td style="width: 15%;"><?php echo $elem['boots']; ?></td>
+                                <td style="width: 15%;"><?php echo $elem['location']; ?></td>
+                                <td style="width: 15%;"><?php echo $elem['bonus']; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+<!--                    --><?php //var_dump(get_armors()); ?>
             </div>
 
             <div class="tab-pane fade" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">

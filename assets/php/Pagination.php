@@ -4,11 +4,11 @@
 class Pagination
 {
 
-    public int $count_pages = 1;
+    public int $count_pages = 0;
     public int $current_page = 1;
     public string $uri = '';
     public int $mid_size = 5;
-    public int $all_pages = 10;
+    public int $all_pages = 5;
 
     public function __construct(
         public int $page = 1,
