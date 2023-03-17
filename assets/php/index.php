@@ -10,7 +10,7 @@ $total = get_count('wearon');
 $pagination = new Pagination((int)$page, $per_page, $total);
 $start = $pagination->get_start();
 
-$countries = get_countries($start, $per_page);
+
 $data = get_cities($start, $per_page);
 ?>
 <!doctype html>
