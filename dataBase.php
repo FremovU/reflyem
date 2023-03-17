@@ -185,6 +185,7 @@
                     <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-75 ms-auto" style="width: 1000px!important;">
                         <thead>
                         <tr>
+                            <th></th>
                             <th class="text-start" scope="col">Название</th>
                             <th scope="col">Шлем</th>
                             <th scope="col">Броня</th>
@@ -197,6 +198,7 @@
                         <tbody>
                         <?php foreach ($armor as $elem): ?>
                             <tr>
+                                <td style="width: 15%; height: 45px"><img style="height: 60px;" src="<?php echo $elem['Image']; ?>" alt="img"></td>
                                 <td style="width: 15%;"><?php echo $elem['title']; ?></td>
                                 <td style="width: 15%;"><?php echo $elem['helmet']; ?></td>
                                 <td style="width: 15%;"><?php echo $elem['body_armor']; ?></td>

@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="databaase">
+    <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="databaase armor">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/36c099ef-4aca-41ec-8510-9a11ca0e1b67.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/36c099ef-4aca-41ec-8510-9a11ca0e1b67.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f5c2616-e9fa-448b-bafa-ec135109fe59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f5c2616-e9fa-448b-bafa-ec135109fe59/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f5c2616-e9fa-448b-bafa-ec135109fe59/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f5c2616-e9fa-448b-bafa-ec135109fe59/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f5c2616-e9fa-448b-bafa-ec135109fe59/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f5c2616-e9fa-448b-bafa-ec135109fe59/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/image/one_hand_sword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/Pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/Pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/funcs.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/funcs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/php/index.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,14 +147,7 @@
       <workItem from="1679005048404" duration="174000" />
       <workItem from="1679028688257" duration="8099000" />
       <workItem from="1679040250243" duration="2357000" />
-      <workItem from="1679074137251" duration="10446000" />
-    </task>
-    <task id="LOCAL-00005" summary="init">
-      <created>1670531746234</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1670531746234</updated>
+      <workItem from="1679074137251" duration="11235000" />
     </task>
     <task id="LOCAL-00006" summary="good back opacity">
       <created>1670577508222</created>
@@ -502,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679068219069</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="databaase armor">
+      <created>1679085018471</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1679085018472</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +511,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix donatypay" />
     <MESSAGE value="fix donatypay1" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix icon" />
@@ -546,7 +535,8 @@
     <MESSAGE value="database" />
     <MESSAGE value="search" />
     <MESSAGE value="databaase" />
-    <option name="LAST_COMMIT_MESSAGE" value="databaase" />
+    <MESSAGE value="databaase armor" />
+    <option name="LAST_COMMIT_MESSAGE" value="databaase armor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
