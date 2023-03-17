@@ -16,7 +16,7 @@
         class="bg-image"
         style="
     background-image: url('assets/image/Frem.png');
-    height: 937px;
+    height: 1500px;
   "
 >
     <h1 class="text-white d-flex mt-3 justify-content-center align-items-center">База знаний</h1>
@@ -69,15 +69,14 @@
                 <input type="search" id="form1" class="form-control" />
                 <label class="form-label text-white" for="form1">Search</label>
             </div>
-            <button type="button" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary">
                 <i class="fas fa-search"></i>
             </button>
         </div>
 
 
         <!-- Pills content -->
-        <div class="tab-content d-flex justify-content-center align-items-center" id="ex1-content">
-
+        <div class="tab-content d-flex justify-content-center align-items-center container-fluid" id="ex1-content" style="width: 100%">
             <div
                     class="tab-pane fade show active text-info fs-5 fw-bold"
                     id="ex1-pills-1"
@@ -97,11 +96,28 @@
 
                 $link = mysqli_connect($host, $user, $pass, $name);
                 $query_all_from_WEARON = 'SELECT * FROM `WEARON`';
+                $query_all_where_material = 'SELECT * FROM `WEARON` WHERE material = `Стальной`';
                 $result = mysqli_query($link, $query_all_from_WEARON) or die(mysqli_error($link));
+
                 for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
 
+                $per_page = 6;
+                $total = count($data);
+                $count_pages = ceil($total / $per_page);
+                $page = $_GET['page'] ?? 1;
+                $page = (int)$page;
+                if (!$page || $page < 1) {
+                    $page = 1;
+                }
+                if ($page > $count_pages) {
+                    $page = $count_pages;
+                }
+                $start = ($page - 1) * $per_page;
+
+
+
                 foreach ($data as $elem): ?>
-                    <table class="table bg-black text-white table-bordered text-center">
+                    <table class="table bg-black text-white table-bordered text-center table-sm justify-content-center align-items-center">
                         <thead>
                         <tr>
                             <th scope="col"></th>
@@ -109,41 +125,44 @@
                             <th scope="col">Описание</th>
                             <th scope="col">Материал</th>
                             <th scope="col">Вес</th>
-                            <th scope="col">Базовый урон</th>
                             <th scope="col">Местонахождение</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th><img style="width: 35px;" src="<?=$elem['image']?>" alt="dagger"></th>
-                            <td><?=$elem['name']?></td>
-                            <td><?=$elem['description']?></td>
-                            <td><?=$elem['material']?></td>
-                            <td><?=$elem['weight']?> кг</td>
-                            <td><?=$elem['baseDamage']?></td>
-                            <td><?=$elem['location']?></td>
+                            <th style="width: 7%;"><img src="<?=$elem['image']?>" alt="dagger"></th>
+                            <td style="width: 15%;"><?=$elem['name']?></td>
+                            <td class="text-start" style="width: 35%;"><?=$elem['description']?></td>
+                            <td style="width: 5%;"><?=$elem['material']?></td>
+                            <td style="width: 5%;"><?=$elem['weight']?> кг</td>
+                            <td style="width: 15%;"><?=$elem['location']?></td>
                         </tr>
                         </tbody>
                     </table>
                 <?php endforeach;
                 ?>
 
-
+                <nav aria-label="Page navigation example" class="justify-content-center d-flex">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span class="text-white" aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link text-white" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link text-white" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link text-white" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span class="text-white" aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 </div>
-            <div class="tab-pane fade " id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
 
-                <table class="text-danger">
-                    <tr>
-                        <td data-info="<?=$elem['Description']?>"><?=$elem['Name']?></td>
-                        <td data-info="Информация о ячейке 2">Ячейка 2</td>
-                        <td data-info="Информация о ячейке 3">Ячейка 3</td>
-                    </tr>
-                    <tr>
-                        <td data-info="Информация о ячейке 4">Ячейка 4</td>
-                        <td data-info="Информация о ячейке 5">Ячейка 5</td>
-                        <td data-info="Информация о ячейке 6">Ячейка 6</td>
-                    </tr>
-                </table>
+            <div class="tab-pane fade " id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                2
             </div>
 
             <div class="tab-pane fade" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">
