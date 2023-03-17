@@ -26,27 +26,7 @@
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
     $data = get_cities($start, $per_page);
-
-
     ?>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-    <!-- Popper Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap CSS -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-
-    <!-- Hierarchy Select CSS -->
-    <link rel="stylesheet" href="assets/style/hierarchy-select.min.css">
-
-    <!-- Hierarchy Select Js -->
-    <script src="assets/script/hierarchy-select.min.js"></script>
 </head>
 <body>
 <!-- Background image -->
@@ -112,37 +92,11 @@
                 <div class="container-fluid d-flex h-100 justify-content-center mb-3" style="width: 350px;">
                 <form action="<?= $_SERVER['SCRIPT_NAME'] ?>">
                     <div class="input-group rounded">
-                        <input type="text" name="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <input type="submit" value="Поиск">
-                        </span>
+                        <input type="search" name="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="submit" class="btn btn-outline-primary bg-primary text-white">Найти</button>
                     </div>
                 </form>
-
-<!--                    <div class="dropdown hierarchy-select" id="example">-->
-<!--                        <button type="button" class="btn btn-secondary dropdown-toggle" id="example-two-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>-->
-<!--                        <div class="dropdown-menu" aria-labelledby="example-two-button">-->
-<!--                            <div class="hs-searchbox">-->
-<!--                                <input type="text" name="search" class="form-control" autocomplete="off">-->
-<!--                            </div>-->
-<!--                            <div class="hs-menu-inner">-->
-<!--                                <a class="dropdown-item" data-value="" data-default-selected="" href="#">Поиск</a>-->
-<!--                                --><?php //foreach ($data as $elem): ?>
-<!--                                    <a class="dropdown-item" data-value="1" href="#">--><?php //echo $elem['name']?><!--</a>-->
-<!--                                --><?php //endforeach;?>
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <input class="d-none" name="example_two" readonly="readonly" aria-hidden="true" type="text"/>-->
-<!--                    </div>-->
-
                 </div>
-                <script>
-                    $(document).ready(function(){
-                        $('#example').hierarchySelect({
-                            hierarchy: false,
-                            width: 'auto'
-                        });
-                    });
-                </script>
                 <?php
                 countPeople($res); // Функция вывода пользователей
                 ?>
@@ -173,9 +127,13 @@
                     </tbody>
                 </table>
                 </div>
+
+
                 <div class="container-fluid d-flex justify-content-center h-100">
                 <?php echo $pagination;  ?>
                 </div>
+
+
             </div>
 
 
