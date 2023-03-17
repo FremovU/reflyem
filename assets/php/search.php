@@ -37,12 +37,32 @@ function countPeople($res) {
         // Цикл для вывода данных
         while ($row = $res -> fetch_assoc()) {
             // Получаем массив с строками которые нужно выводить
-            $arr = doesItExist($row);
-            // Вывод данных
-            echo "
-                  Название: ". $row['name'] ."<br>  
-                  Тип: ". $row['type'] ."<hr>";
-        }
+            $arr = doesItExist($row); ?>
+            <!--таблица в первом пилсе-->
+            <div class="container-fluid d-flex justify-content-center h-100">
+                <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-50">
+                    <thead>
+                    <tr>
+
+                        <th scope="col">Название</th>
+                        <th scope="col">Описание</th>
+                        <th scope="col">Материал</th>
+                        <th scope="col">Вес</th>
+                        <th scope="col">Местонахождение</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+        <tr>
+            <td style="width: 5%; height: 45px;"><?php echo $row['name']; ?></td>
+            <td style="width: 45%;"><?php echo $row['description']; ?></td>
+            <td style="width: 15%;"><?php echo $row['material']; ?></td>
+            <td style="width: 5%;"><?php echo $row['weight']; ?></td>
+            <td style="width: 15%;"><?php echo $row['location']; ?></td>
+        </tr>
+                    </tbody>
+                </table>
+            </div>
+       <?php }
         // Если данных нет
     } else {
 

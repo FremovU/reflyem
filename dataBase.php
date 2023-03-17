@@ -21,7 +21,7 @@
     require __DIR__ . '/assets/php/search.php';
 
     $page = $_GET['page'] ?? 1;
-    $per_page = 10;
+    $per_page = 5;
     $total = get_count('wearon');
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
