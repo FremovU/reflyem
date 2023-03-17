@@ -12,16 +12,16 @@ function get_count($table): int
     return $res->fetchColumn();
 }
 
-function get_countries($start, $per_page): array
+function get_wearons($start, $per_page): array
 {
     global $pdo;
     $res = $pdo->query("SELECT * FROM wearon LIMIT $start, $per_page");
     return $res->fetchAll();
 }
 
-function get_cities($start, $per_page): array
+function get_daggers($start, $per_page): array
 {
     global $pdo;
-    $res = $pdo->query("SELECT * FROM wearon LIMIT $start, $per_page");
+    $res = $pdo->query("SELECT * FROM `wearon` WHERE type = 'spear' LIMIT $start, $per_page");
     return $res->fetchAll();
 }

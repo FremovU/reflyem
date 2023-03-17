@@ -25,7 +25,7 @@
     $total = get_count('wearon');
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
-    $data = get_cities($start, $per_page);
+    $data = get_wearons($start, $per_page);
     ?>
 </head>
 <body>
@@ -103,11 +103,11 @@
 
             <!--таблица в первом пилсе-->
                 <div class="container-fluid d-flex justify-content-center h-100">
-                <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-50">
+                <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-75 ms-auto" style="width: 1000px!important;">
                     <thead>
                     <tr>
 
-                        <th scope="col">Название</th>
+                        <th class="text-start" scope="col">Название</th>
                         <th scope="col">Описание</th>
                         <th scope="col">Материал</th>
                         <th scope="col">Вес</th>
@@ -115,6 +115,7 @@
                     </tr>
                     </thead>
                     <tbody>
+
                     <?php foreach ($data as $elem): ?>
                         <tr>
                             <td style="width: 5%; height: 45px;"><?php echo $elem['name']; ?></td>
@@ -126,8 +127,58 @@
                     <?php endforeach; ?>
                     </tbody>
                 </table>
-                </div>
 
+
+                    <div class="fw-bold text-white fs-5 shadow-5-strong container-fluid h-100 w-25 me-auto d-flex justify-content-center flex-column align-items-center ms-3" style="width: 250px!important;">
+                        <div>
+                            <!-- Default radio -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                <label class="form-check-label" for="flexRadioDefault1"> Кинжалы </label>
+                                <script>
+                                    let radio = document.getElementById('flexRadioDefault1');
+                                    if (radio.chec)
+                                </script>
+                            </div>
+
+                            <!-- Default checked radio -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
+                                <label class="form-check-label" for="flexRadioDefault2"> Одноручные мечи </label>
+                            </div>
+
+                            <!-- Default checked radio -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked/>
+                                <label class="form-check-label" for="flexRadioDefault3"> Двуручные мечи </label>
+                            </div>
+
+                            <!-- Default checked radio -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked/>
+                                <label class="form-check-label" for="flexRadioDefault4"> Секиры </label>
+                            </div>
+
+                            <!-- Default checked radio -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked/>
+                                <label class="form-check-label" for="flexRadioDefault5"> Булавы </label>
+                            </div>
+
+
+                        </div>
+                        <!-- Default checkbox -->
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
 
                 <div class="container-fluid d-flex justify-content-center h-100">
                 <?php echo $pagination;  ?>

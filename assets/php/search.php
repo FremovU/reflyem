@@ -27,6 +27,7 @@ function doesItExist(array $arr) {
     // Создаём новый массив
     $data = array(
         'name' => $arr['name'] != false ? $arr['name'] : 'Нет данных',
+
     );
     return $data; // Возвращаем этот массив
 }
