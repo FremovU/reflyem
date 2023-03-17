@@ -22,6 +22,20 @@ function get_wearons($start, $per_page): array
 function get_daggers($start, $per_page): array
 {
     global $pdo;
+    $res = $pdo->query("SELECT * FROM `wearon` WHERE type = 'dagger' LIMIT $start, $per_page");
+    return $res->fetchAll();
+}
+
+function get_spears($start, $per_page): array
+{
+    global $pdo;
     $res = $pdo->query("SELECT * FROM `wearon` WHERE type = 'spear' LIMIT $start, $per_page");
     return $res->fetchAll();
 }
+function get_axes($start, $per_page): array
+{
+    global $pdo;
+    $res = $pdo->query("SELECT * FROM `wearon` WHERE type = 'axe' LIMIT $start, $per_page");
+    return $res->fetchAll();
+}
+

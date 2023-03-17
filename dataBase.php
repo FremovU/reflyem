@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <?php
     error_reporting(E_ALL);
-    ini_set('display_errors', 'on');
+    ini_set('display_errors', 'off');
     mb_internal_encoding('UTF-8');
 
     require __DIR__ . '/assets/php/Pagination.php';
@@ -21,7 +21,7 @@
     require __DIR__ . '/assets/php/search.php';
 
     $page = $_GET['page'] ?? 1;
-    $per_page = 5;
+    $per_page = 6;
     $total = get_count('wearon');
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
@@ -115,7 +115,20 @@
                     </tr>
                     </thead>
                     <tbody>
-
+                   <?php
+                   $wearon = $_POST['wearon'];
+                   if ($wearon == "spear"){
+                      $data = get_spears($start, $per_page);
+                   }
+                   else if($wearon == "dagger"){
+                       $data = get_daggers($start, $per_page);
+                   }
+                   else if ($wearon == "axe") {
+                       $data = get_axes($start, $per_page);
+                   }
+                   else{
+                       $data = get_wearons($start, $per_page);
+                   }?>
                     <?php foreach ($data as $elem): ?>
                         <tr>
                             <td style="width: 5%; height: 45px;"><?php echo $elem['name']; ?></td>
@@ -130,41 +143,23 @@
 
 
                     <div class="fw-bold text-white fs-5 shadow-5-strong container-fluid h-100 w-25 me-auto d-flex justify-content-center flex-column align-items-center ms-3" style="width: 250px!important;">
-                        <div>
-                            <!-- Default radio -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-                                <label class="form-check-label" for="flexRadioDefault1"> Кинжалы </label>
-                                <script>
-                                    let radio = document.getElementById('flexRadioDefault1');
-                                    if (radio.chec)
-                                </script>
-                            </div>
+                        <div class="form-check">
 
-                            <!-- Default checked radio -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-                                <label class="form-check-label" for="flexRadioDefault2"> Одноручные мечи </label>
-                            </div>
-
-                            <!-- Default checked radio -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked/>
-                                <label class="form-check-label" for="flexRadioDefault3"> Двуручные мечи </label>
-                            </div>
-
-                            <!-- Default checked radio -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked/>
-                                <label class="form-check-label" for="flexRadioDefault4"> Секиры </label>
-                            </div>
-
-                            <!-- Default checked radio -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked/>
-                                <label class="form-check-label" for="flexRadioDefault5"> Булавы </label>
-                            </div>
-
+                            <form action="dataBase.php" method="post">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="wearon" value="spear">
+                                </label> Копья<br>
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="wearon" value="dagger">
+                                </label> Кинжалы<br>
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="wearon" value="axe">
+                                </label> Топоры<br>
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="wearon" value="wearon">
+                                </label> Всё оружие<br>
+                                <input type="submit" class="btn btn-primary mt-3" value="Отправить">
+                            </form>
 
                         </div>
                         <!-- Default checkbox -->
