@@ -91,10 +91,15 @@
                     aria-labelledby="ex1-tab-1"
             >
                 <!-- Pills navs поиск в 1 пилсе -->
+                <div class="container-fluid d-flex h-100 justify-content-center mb-3" style="width: 350px;">
                 <form action="<?= $_SERVER['SCRIPT_NAME'] ?>">
-                    <p>Поиск Человека: <input type="text" name="search" id=""> <input type="submit" value="Поиск"></p>
-                    <hr>
+                    <div class="input-group rounded">
+                        <input type="text" name="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="submit" value="Поиск">
+                        </span>
+                    </div>
                 </form>
+                </div>
                 <?php
                 countPeople($res); // Функция вывода пользователей
                 ?>

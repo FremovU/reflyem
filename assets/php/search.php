@@ -45,7 +45,7 @@ function countPeople($res) {
         }
         // Если данных нет
     } else {
-        echo "Не кто не найден";
+
     }
 }
 ?>
