@@ -15,7 +15,7 @@ function get_count($table): int
 function get_wearons($start, $per_page): array
 {
     global $pdo;
-    $res = $pdo->query("SELECT * FROM wearon LIMIT $start, $per_page");
+    $res = $pdo->query("SELECT * FROM wearon order by name LIMIT $start, $per_page");
     return $res->fetchAll();
 }
 

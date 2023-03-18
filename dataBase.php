@@ -91,9 +91,9 @@
             >
                 <!-- Pills navs поиск в 1 пилсе -->
                 <div class="container-fluid d-flex h-100 justify-content-center mb-3" style="width: 350px;">
-                <form action="<?= $_SERVER['SCRIPT_NAME'] ?>">
+                <form action="dataBase.php" method="get">
                     <div class="input-group rounded">
-                        <input type="search" name="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="search" name="search" id="search" class="form-control rounded" placeholder="Поиск" aria-label="Search" aria-describedby="search-addon" />
                         <button type="submit" class="btn btn-outline-primary bg-primary text-white">Найти</button>
                     </div>
                 </form>

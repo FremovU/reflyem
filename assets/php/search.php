@@ -17,21 +17,25 @@ if ($mysqli->connect_error) {
 $inputSearch = $_REQUEST['search'];
 
 // Создаём SQL запрос
-$sql = "SELECT * FROM wearon WHERE name LIKE '%$inputSearch%' limit 1";
+$sql = "SELECT * FROM wearon WHERE name LIKE '$inputSearch%' limit 1";
 
 // Отправляем SQL запрос
 $res = $mysqli -> query($sql);
 
-
-
+function conditeon_check($res) {
+    if (empty($res)) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function get_search_result($res) {
     // Проверка на то, что строк больше нуля
     if ($res -> num_rows > 0) {
         // Цикл для вывода данных
-        while ($row = $res -> fetch_assoc()) {
-            // Получаем массив с строками которые нужно выводить
-             ?>
+        $t = conditeon_check($res);
+        while ($row = $res -> fetch_assoc()) {// Получаем массив с строками которые нужно выводить?>
             <!--таблица в первом пилсе-->
             <div class="container-fluid d-flex justify-content-center h-100">
                 <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-50">
@@ -59,7 +63,7 @@ function get_search_result($res) {
        <?php }
         // Если данных нет
     } else {
-
+        echo 'не найдено';
     }
 }
 ?>
