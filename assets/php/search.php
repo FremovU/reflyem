@@ -17,28 +17,21 @@ if ($mysqli->connect_error) {
 $inputSearch = $_REQUEST['search'];
 
 // Создаём SQL запрос
-$sql = "SELECT * FROM `wearon` WHERE `name` = '$inputSearch'";
+$sql = "SELECT * FROM wearon WHERE name LIKE '%$inputSearch%' limit 1";
 
 // Отправляем SQL запрос
 $res = $mysqli -> query($sql);
 
 
-function doesItExist(array $arr) {
-    // Создаём новый массив
-    $data = array(
-        'name' => $arr['name'] != false ? $arr['name'] : 'Нет данных',
 
-    );
-    return $data; // Возвращаем этот массив
-}
 
-function countPeople($res) {
+function get_search_result($res) {
     // Проверка на то, что строк больше нуля
     if ($res -> num_rows > 0) {
         // Цикл для вывода данных
         while ($row = $res -> fetch_assoc()) {
             // Получаем массив с строками которые нужно выводить
-            $arr = doesItExist($row); ?>
+             ?>
             <!--таблица в первом пилсе-->
             <div class="container-fluid d-flex justify-content-center h-100">
                 <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-50">

@@ -21,7 +21,7 @@
     require __DIR__ . '/assets/php/search.php';
 
     $page = $_GET['page'] ?? 1;
-    $per_page = 6;
+    $per_page = 5;
     $total = get_count('wearon');
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
@@ -98,7 +98,7 @@
                     </div>
                 </form>
                 </div>
-
+                <?php get_search_result($res); ?>
             <!--таблица в первом пилсе-->
                 <div class="container-fluid d-flex justify-content-center h-100">
                 <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-75 ms-auto" style="width: 1000px!important;">

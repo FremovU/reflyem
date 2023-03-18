@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="databaase armor">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/36c099ef-4aca-41ec-8510-9a11ca0e1b67.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/36c099ef-4aca-41ec-8510-9a11ca0e1b67.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +33,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration">
-    <include_path>
-      <path value="" />
-    </include_path>
   </component>
   <component name="ProjectId" id="2Ib7ApeynjtWi9KsPkboN1fglC6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -69,6 +65,16 @@
       <recent name="C:\Users\Frem\Desktop\reflyem\assets\style" />
       <recent name="C:\Users\Frem\Desktop\reflyem" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="search.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/assets/php/search.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.search.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
