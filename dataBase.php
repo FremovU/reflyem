@@ -198,14 +198,14 @@
                         <tbody>
                         <?php foreach ($armor as $elem): ?>
                             <tr>
-                                <td style="width: 15%; height: 45px"><img style="height: 60px;" src="<?php echo $elem['Image']; ?>" alt="img"></td>
-                                <td style="width: 15%;"><?php echo $elem['title']; ?></td>
-                                <td style="width: 15%;"><?php echo $elem['helmet']; ?></td>
-                                <td style="width: 15%;"><?php echo $elem['body_armor']; ?></td>
-                                <td style="width: 15%;"><?php echo $elem['gloves']; ?></td>
-                                <td style="width: 15%;"><?php echo $elem['boots']; ?></td>
-                                <td style="width: 15%;"><?php echo $elem['location']; ?></td>
-                                <td style="width: 15%;"><?php echo $elem['bonus']; ?></td>
+                                <td style="width: 12.5%; height: 45px"><img style="height: 60px;" src="<?php echo $elem['Image']; ?>" alt="img"></td>
+                                <td style="width: 12.5%;"><?php echo $elem['title']; ?></td>
+                                <td style="width: 12.5%;"><?php echo $elem['helmet']; ?></td>
+                                <td style="width: 12.5%;"><?php echo $elem['body_armor']; ?></td>
+                                <td style="width: 12.5%;"><?php echo $elem['gloves']; ?></td>
+                                <td style="width: 12.5%;"><?php echo $elem['boots']; ?></td>
+                                <td style="width: 12.5%;"><?php echo $elem['location']; ?></td>
+                                <td style="width: 12.5%;"><?php echo $elem['bonus']; ?></td>
                             </tr>
                         <?php endforeach; ?>
                         </tbody>
