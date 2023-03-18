@@ -62,8 +62,6 @@ function get_search_result($res) {
 
        <?php }
         // Если данных нет
-    } else {
-        echo 'не найдено';
     }
 }
 ?>

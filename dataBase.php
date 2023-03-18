@@ -71,6 +71,7 @@
                         <button type="submit" class="btn btn-outline-primary bg-primary text-white">Найти</button>
                     </div>
                 </form>
+
                 </div>
                 <?php get_search_result($res); ?>
             <!--таблица в первом пилсе-->
@@ -114,7 +115,6 @@
                     <?php endforeach; ?>
                     </tbody>
                 </table>
-
                     <div class="fw-bold text-white fs-5 shadow-5-strong container-fluid h-100 w-25 me-auto d-flex justify-content-center flex-column align-items-center ms-3" style="width: 250px!important;">
                         <div class="form-check">
                                 <h2>Сортировка</h2>
@@ -133,7 +133,13 @@
                                 </label> Всё оружие<br>
                                 <input type="submit" class="btn btn-primary mt-3" value="Подтвердить">
                             </form>
-
+                            <!--Сброс поиска-->
+                            <div class="ms-4 mt-4">
+                                <form action="dataBase.php" method="post">
+                                    <input class="btn btn-primary rounded-3" value="Сброс" type="submit" name="search">
+                                    <?php $res = '123'; ?>
+                                </form>
+                            </div>
                         </div>
                         <!-- Default checkbox -->
 <!--                        <div>-->
@@ -155,8 +161,6 @@
         </div>
     </div>
 </div>
-
-
 <script src="assets/mdb/js/mdb.min.js"></script>
 </body>
 </html>
