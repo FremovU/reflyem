@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c4aba6e-896c-425f-9779-673dd102e73a" name="Changes" comment="databaase search">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/funcs.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/funcs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/php/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calcLP.html" beforeDir="false" afterPath="$PROJECT_DIR$/calcLP.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,13 +155,6 @@
       <workItem from="1679028688257" duration="8099000" />
       <workItem from="1679040250243" duration="2357000" />
       <workItem from="1679074137251" duration="11235000" />
-    </task>
-    <task id="LOCAL-00008" summary="discord">
-      <created>1670588670185</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1670588670185</updated>
     </task>
     <task id="LOCAL-00009" summary="borders">
       <created>1670603427371</created>
@@ -495,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679132916875</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="databaase search">
+      <created>1679133045929</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1679133045929</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

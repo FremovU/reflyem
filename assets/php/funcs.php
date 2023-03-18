@@ -15,7 +15,7 @@ function get_count($table): int
 function get_wearons($start, $per_page): array
 {
     global $pdo;
-    $res = $pdo->query("SELECT * FROM wearon order by name LIMIT $start, $per_page");
+    $res = $pdo->query("SELECT * FROM wearon order by type LIMIT $start, $per_page");
     return $res->fetchAll();
 }
 
@@ -36,12 +36,6 @@ function get_axes($start, $per_page): array
 {
     global $pdo;
     $res = $pdo->query("SELECT * FROM `wearon` WHERE type = 'axe' LIMIT $start, $per_page");
-    return $res->fetchAll();
-}
-function get_armors($start, $per_page): array
-{
-    global $pdo;
-    $res = $pdo->query("select * from armor; LIMIT $start, $per_page");
     return $res->fetchAll();
 }
 

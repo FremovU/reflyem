@@ -16,9 +16,9 @@
     mb_internal_encoding('UTF-8');
 
     require __DIR__ . '/assets/php/Pagination.php';
-    require __DIR__ . '/assets/php/db.php';
     require __DIR__ . '/assets/php/funcs.php';
     require __DIR__ . '/assets/php/search.php';
+    require __DIR__ . '/assets/php/db.php';
 
     $page = $_GET['page'] ?? 1;
     $per_page = 5;
@@ -26,7 +26,6 @@
     $pagination = new Pagination((int)$page, $per_page, $total);
     $start = $pagination->get_start();
     $data = get_wearons($start, $per_page);
-    $armor = get_armors($start, $per_page);
     ?>
 </head>
 <body>
@@ -52,31 +51,6 @@
                         aria-controls="ex1-pills-1"
                         aria-selected="true"
                 >Оружие</a
-                >
-            </li>
-
-            <li class="nav-item" role="presentation">
-                <a
-                        class="nav-link"
-                        id="ex1-tab-2"
-                        data-mdb-toggle="pill"
-                        href="#ex1-pills-2"
-                        role="tab"
-                        aria-controls="ex1-pills-2"
-                        aria-selected="false"
-                >Броня</a
-                >
-            </li>
-            <li class="nav-item" role="presentation">
-                <a
-                        class="nav-link"
-                        id="ex1-tab-3"
-                        data-mdb-toggle="pill"
-                        href="#ex1-pills-3"
-                        role="tab"
-                        aria-controls="ex1-pills-3"
-                        aria-selected="false"
-                >кольца</a
                 >
             </li>
         </ul>
@@ -172,52 +146,13 @@
 <!--                        </div>-->
                     </div>
                 </div>
-
                 <div class="container-fluid d-flex justify-content-center h-100">
                     <?php
                     echo $pagination;
                     ?>
                 </div>
             </div>
-
-            <div class="tab-pane fade " id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                <div class="container-fluid d-flex justify-content-center h-100">
-                    <table class="table bg-black text-white table-bordered text-center justify-content-center align-items-center w-75 ms-auto" style="width: 1000px!important;">
-                        <thead>
-                        <tr>
-                            <th></th>
-                            <th class="text-start" scope="col">Название</th>
-                            <th scope="col">Шлем</th>
-                            <th scope="col">Броня</th>
-                            <th scope="col">Перчатки</th>
-                            <th scope="col">Сапоги</th>
-                            <th scope="col">Местонахождение</th>
-                            <th scope="col">Бонус сета</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($armor as $elem): ?>
-                            <tr>
-                                <td style="width: 12.5%; height: 45px"><img style="height: 60px;" src="<?php echo $elem['Image']; ?>" alt="img"></td>
-                                <td style="width: 12.5%;"><?php echo $elem['title']; ?></td>
-                                <td style="width: 12.5%;"><?php echo $elem['helmet']; ?></td>
-                                <td style="width: 12.5%;"><?php echo $elem['body_armor']; ?></td>
-                                <td style="width: 12.5%;"><?php echo $elem['gloves']; ?></td>
-                                <td style="width: 12.5%;"><?php echo $elem['boots']; ?></td>
-                                <td style="width: 12.5%;"><?php echo $elem['location']; ?></td>
-                                <td style="width: 12.5%;"><?php echo $elem['bonus']; ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
-<!--                    --><?php //var_dump(get_armors()); ?>
-            </div>
-
-            <div class="tab-pane fade" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                Tab 3 content
-            </div>
         </div>
-
     </div>
 </div>
 

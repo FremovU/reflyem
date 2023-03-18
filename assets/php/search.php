@@ -32,9 +32,8 @@ function conditeon_check($res) {
 
 function get_search_result($res) {
     // Проверка на то, что строк больше нуля
-    if ($res -> num_rows > 0) {
+    if (!($res -> num_rows == 0)) {
         // Цикл для вывода данных
-        $t = conditeon_check($res);
         while ($row = $res -> fetch_assoc()) {// Получаем массив с строками которые нужно выводить?>
             <!--таблица в первом пилсе-->
             <div class="container-fluid d-flex justify-content-center h-100">
@@ -60,6 +59,7 @@ function get_search_result($res) {
                     </tbody>
                 </table>
             </div>
+
        <?php }
         // Если данных нет
     } else {
